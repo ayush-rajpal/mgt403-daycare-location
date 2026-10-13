@@ -1,0 +1,116 @@
+=== Q1. ACS 5-year county data ===
+ACS rows (county x year): 25,764; per year: {2015: 3220, 2016: 3220, 2017: 3220, 2018: 3220, 2019: 3220, 2020: 3221, 2021: 3221, 2022: 3222}
+Variable labels identical across 2015-2022 vintages: True 
+
+=== Q2. OEWS childcare-worker (SOC 39-9011) area wages ===
+year  file              
+2015  BOS_M2015_dl.xlsx     157
+      MSA_M2015_dl.xlsx     415
+      aMSA_M2015_dl.xlsx     11
+2016  BOS_M2016_dl.xlsx     157
+      MSA_M2016_dl.xlsx     415
+      aMSA_M2016_dl.xlsx     11
+2017  BOS_M2017_dl.xlsx     158
+      MSA_M2017_dl.xlsx     417
+      aMSA_M2017_dl.xlsx     11
+2018  BOS_M2018_dl.xlsx     133
+      MSA_M2018_dl.xlsx     392
+2019  BOS_M2019_dl.xlsx     132
+      MSA_M2019_dl.xlsx     392
+2020  BOS_M2020_dl.xlsx     133
+      MSA_M2020_dl.xlsx     384
+2021  BOS_M2021_dl.xlsx     135
+      MSA_M2021_dl.xlsx     389
+2022  BOS_M2022_dl.xlsx     135
+      MSA_M2022_dl.xlsx     384
+Duplicate year x area rows across files: 0
+Suppressed ('*') annual wage cells: 5
+
+=== Q3. Merge to year x county, metro sample ===
+Dropped retired FIPS codes (absent from every ACS vintage): ['12025', '51515']
+      metro_counties  no_oews_row  wage_missing  acs_missing  rent_missing  wage_missing_pct
+year                                                                                        
+2015            1233           10            11            0             1              0.89
+2016            1233           13            14            0             0              1.14
+2017            1234           10            10            0             0              0.81
+2018            1233            5             5            0             0              0.41
+2019            1235            6             6            0             0              0.49
+2020            1235           18            20            0             0              1.62
+2021            1235           13            13            0             1              1.05
+2022            1235           20            20            7             8              1.62
+County-years with no ACS match:
+year  state_abbr
+2022  CT            7
+
+=== Q4. 2022 descriptive statistics (metro counties) ===
+                                                         Mean           SD       N         Min           Max
+Childcare-worker mean annual wage, OEWS ($)        27373.4815    4337.1018  1215.0  19540.0000  4.170000e+04
+Childcare-worker mean hourly wage, OEWS ($)           13.1607       2.0849  1215.0      9.3900  2.005000e+01
+Per-capita income ($)                              36156.1368   10504.0660  1228.0   8318.0000  8.970200e+04
+Total population                                  231862.6327  506835.1737  1228.0     50.0000  9.936690e+06
+Own children under 6                               15440.8713   34274.9535  1228.0      0.0000  6.160460e+05
+Under-6 w/ all resident parents in labor force     10419.9186   22637.0145  1228.0      0.0000  4.064650e+05
+Median gross rent ($/month)                         1051.7669     341.8992  1227.0    330.0000  2.805000e+03
+Share women 25+ with bachelor's+                       0.3013       0.1070  1228.0      0.0812  7.761000e-01
+Share women 16-64 full-time year-round                 0.4367       0.0683  1228.0      0.1648  7.143000e-01
+Share kids under 6 (of population)                     0.0629       0.0121  1228.0      0.0000  1.093000e-01
+Share kids under 6 who need care (of population)       0.0423       0.0094  1228.0      0.0000  6.950000e-02
+
+=== Q5. Real (2022 $) wages and rents ===
+
+wage_annual:
+ year    N  mean_real   ci_low  ci_high  mean_nominal  mean_real_balanced  N_balanced
+ 2015 1222   25851.12 25667.78 26034.45      20936.44            25890.11        1189
+ 2016 1219   26169.74 25980.28 26359.20      21461.86            26196.76        1189
+ 2017 1224   26392.59 26195.47 26589.71      22105.73            26419.22        1189
+ 2018 1228   26505.90 26298.59 26713.20      22742.87            26525.26        1189
+ 2019 1229   26888.87 26670.77 27106.97      23489.53            26922.12        1189
+ 2020 1215   27641.46 27392.47 27890.45      24444.87            27670.06        1189
+ 2021 1222   27646.21 27395.64 27896.77      25597.69            27659.93        1189
+ 2022 1215   27373.48 27129.37 27617.60      27373.48            27392.96        1189
+
+median_gross_rent:
+ year    N  mean_real  ci_low  ci_high  mean_nominal  mean_real_balanced  N_balanced
+ 2015 1232     993.43  977.73  1009.12        804.56              991.77        1223
+ 2016 1233    1001.14  985.07  1017.21        821.03              999.52        1223
+ 2017 1234    1010.71  994.21  1027.22        846.55             1009.16        1223
+ 2018 1233    1020.46 1003.43  1037.50        875.59             1018.96        1223
+ 2019 1235    1029.66 1012.03  1047.28        899.49             1028.39        1223
+ 2020 1235    1040.47 1022.16  1058.77        920.14             1039.33        1223
+ 2021 1234    1045.05 1026.34  1063.77        967.62             1044.10        1223
+ 2022 1227    1051.77 1032.62  1070.92       1051.77             1052.29        1223
+
+=== Q6. Real childcare-worker annual wage: 2022 vs 2019 ===
+paired: {'n': 1212, 'mean2019': np.float64(26912.70125636697), 'mean2022': np.float64(27369.059405940596), 'dbar': np.float64(456.3581495736272), 'sd': np.float64(1852.3232083181895), 'se': np.float64(53.20659395531008), 't': np.float64(8.577097604799453), 'df': 1211, 'p': np.float64(2.932588388094628e-17), 'scipy_t': np.float64(8.577097604799453), 'scipy_p': np.float64(2.932588388094628e-17), 'tcrit': np.float64(1.9619248463825503), 'ci': [np.float64(351.9708109013167), np.float64(560.7454882459376)], 'share_up': np.float64(0.6221122112211221)}
+welch: {'n2019': 1229, 'n2022': 1215, 'mean2019': np.float64(26888.870000801682), 'mean2022': np.float64(27373.48148148148), 'sd2019': np.float64(3897.2437628398343), 'sd2022': np.float64(4337.101782596009), 't': np.float64(2.904403038017397), 'p': np.float64(0.0037130534223733655), 'df': np.float64(2408.5061326099444)}
+metro_paired: {'n': 374, 'mean2019': np.float64(27207.57430854621), 'mean2022': np.float64(27704.732620320854), 'dbar': np.float64(497.1583117746406), 't': np.float64(4.456677247626196), 'p': np.float64(1.1023034799916947e-05), 'share_up': np.float64(0.606951871657754)}
+nominal: {'mean2019': np.float64(23510.346534653465), 'mean2022': np.float64(27369.059405940596)}
+cpi_change: 0.14471733611831472
+
+=== Q7. OLS: childcare-worker annual wage (2022 $) on female college share, 2022 ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            wage_annual   R-squared:                       0.168
+Model:                            OLS   Adj. R-squared:                  0.167
+Method:                 Least Squares   F-statistic:                     243.1
+Date:                Mon, 12 Oct 2026   Prob (F-statistic):           4.48e-50
+Time:                        21:18:37   Log-Likelihood:                -11717.
+No. Observations:                1208   AIC:                         2.344e+04
+Df Residuals:                    1206   BIC:                         2.345e+04
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+Intercept             2.236e+04    339.161     65.925      0.000    2.17e+04     2.3e+04
+female_college_share   1.65e+04   1058.190     15.593      0.000    1.44e+04    1.86e+04
+==============================================================================
+Omnibus:                       71.387   Durbin-Watson:                   0.626
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               85.157
+Skew:                           0.585   Prob(JB):                     3.22e-19
+Kurtosis:                       3.569   Cond. No.                         10.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Q7 summary: {'n': 1208, 'coef': np.float64(16499.988728162378), 'intercept': np.float64(22359.1936675599), 'se': np.float64(1058.1895093662222), 't': np.float64(15.592659520925189), 'p': np.float64(4.482852792631941e-50), 'ci': [14423.891826396402, 18576.085629928355], 'r2': np.float64(0.16777712004313594), 'se_hc1': np.float64(1092.4503042843005), 'p_hc1': np.float64(1.5320860039143892e-51), 'se_cluster': np.float64(2217.329499025861), 'p_cluster': np.float64(9.963977565203042e-14), 't_cluster': np.float64(7.441378800675008), 'n_clusters': 373, 'slope_hand': np.float64(16499.988728162352), 'x_mean': np.float64(0.30198214737564083), 'x_sd': np.float64(0.10744129135556134), 'y_mean': np.float64(27341.895695364237), 'y_sd': np.float64(4328.01243044187), 'corr': np.float64(0.40960605469540573)}

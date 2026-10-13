@@ -1,0 +1,15 @@
+# secrets and personal files (presenter script lives in private/)
+private/
+census_api_key.txt
+.env
+
+# large public raw downloads (fetch with: python src/download_raw_data.py)
+data/raw/NDCP2022.xlsx
+data/raw/oews/
+
+# tooling
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+~$*

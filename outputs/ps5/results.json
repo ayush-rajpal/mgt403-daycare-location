@@ -1,0 +1,588 @@
+{
+ "q1": {
+  "rows_per_year": {
+   "2015": 3220,
+   "2016": 3220,
+   "2017": 3220,
+   "2018": 3220,
+   "2019": 3220,
+   "2020": 3221,
+   "2021": 3221,
+   "2022": 3222
+  },
+  "labels_consistent": true,
+  "labels_2022": {
+   "B19301_001E": "Estimate!!Per capita income in the past 12 months (in 2022 inflation-adjusted dollars)",
+   "B01001_001E": "Estimate!!Total:",
+   "B23008_002E": "Estimate!!Total:!!Under 6 years:",
+   "B23008_004E": "Estimate!!Total:!!Under 6 years:!!Living with two parents:!!Both parents in labor force",
+   "B23008_010E": "Estimate!!Total:!!Under 6 years:!!Living with one parent:!!Living with father:!!In labor force",
+   "B23008_013E": "Estimate!!Total:!!Under 6 years:!!Living with one parent:!!Living with mother:!!In labor force",
+   "B25064_001E": "Estimate!!Median gross rent",
+   "B15002_019E": "Estimate!!Total:!!Female:",
+   "B15002_032E": "Estimate!!Total:!!Female:!!Bachelor's degree",
+   "B15002_033E": "Estimate!!Total:!!Female:!!Master's degree",
+   "B15002_034E": "Estimate!!Total:!!Female:!!Professional school degree",
+   "B15002_035E": "Estimate!!Total:!!Female:!!Doctorate degree",
+   "B23022_026E": "Estimate!!Total:!!Female:",
+   "B23022_029E": "Estimate!!Total:!!Female:!!Worked in the past 12 months:!!Usually worked 35 or more hours per week:!!50 to 52 weeks"
+  }
+ },
+ "retired_fips": [
+  "12025",
+  "51515"
+ ],
+ "q3": {
+  "coverage": [
+   {
+    "year": 2015,
+    "metro_counties": 1233,
+    "no_oews_row": 10,
+    "wage_missing": 11,
+    "acs_missing": 0,
+    "rent_missing": 1,
+    "wage_missing_pct": 0.8921330089213301
+   },
+   {
+    "year": 2016,
+    "metro_counties": 1233,
+    "no_oews_row": 13,
+    "wage_missing": 14,
+    "acs_missing": 0,
+    "rent_missing": 0,
+    "wage_missing_pct": 1.1354420113544201
+   },
+   {
+    "year": 2017,
+    "metro_counties": 1234,
+    "no_oews_row": 10,
+    "wage_missing": 10,
+    "acs_missing": 0,
+    "rent_missing": 0,
+    "wage_missing_pct": 0.8103727714748784
+   },
+   {
+    "year": 2018,
+    "metro_counties": 1233,
+    "no_oews_row": 5,
+    "wage_missing": 5,
+    "acs_missing": 0,
+    "rent_missing": 0,
+    "wage_missing_pct": 0.40551500405515006
+   },
+   {
+    "year": 2019,
+    "metro_counties": 1235,
+    "no_oews_row": 6,
+    "wage_missing": 6,
+    "acs_missing": 0,
+    "rent_missing": 0,
+    "wage_missing_pct": 0.48582995951417
+   },
+   {
+    "year": 2020,
+    "metro_counties": 1235,
+    "no_oews_row": 18,
+    "wage_missing": 20,
+    "acs_missing": 0,
+    "rent_missing": 0,
+    "wage_missing_pct": 1.6194331983805668
+   },
+   {
+    "year": 2021,
+    "metro_counties": 1235,
+    "no_oews_row": 13,
+    "wage_missing": 13,
+    "acs_missing": 0,
+    "rent_missing": 1,
+    "wage_missing_pct": 1.0526315789473684
+   },
+   {
+    "year": 2022,
+    "metro_counties": 1235,
+    "no_oews_row": 20,
+    "wage_missing": 20,
+    "acs_missing": 7,
+    "rent_missing": 8,
+    "wage_missing_pct": 1.6194331983805668
+   }
+  ],
+  "no_acs": [
+   {
+    "year": 2022,
+    "state_abbr": "CT",
+    "n": 7
+   }
+  ],
+  "wage_missing_areas_2022": [
+   "Arecibo, PR",
+   "Bremerton-Silverdale, WA",
+   "Columbus, IN",
+   "Fond du Lac, WI",
+   "Gadsden, AL",
+   "Guayama, PR",
+   "Homosassa Springs, FL",
+   "Janesville-Beloit, WI",
+   "Madera, CA",
+   "Mayaguez, PR",
+   "Pine Bluff, AR",
+   "Yuma, AZ"
+  ],
+  "rows": 9873,
+  "dup_oews": 0,
+  "oews_files": [
+   {
+    "year": 2015,
+    "file": "BOS_M2015_dl.xlsx",
+    "n": 157
+   },
+   {
+    "year": 2015,
+    "file": "MSA_M2015_dl.xlsx",
+    "n": 415
+   },
+   {
+    "year": 2015,
+    "file": "aMSA_M2015_dl.xlsx",
+    "n": 11
+   },
+   {
+    "year": 2016,
+    "file": "BOS_M2016_dl.xlsx",
+    "n": 157
+   },
+   {
+    "year": 2016,
+    "file": "MSA_M2016_dl.xlsx",
+    "n": 415
+   },
+   {
+    "year": 2016,
+    "file": "aMSA_M2016_dl.xlsx",
+    "n": 11
+   },
+   {
+    "year": 2017,
+    "file": "BOS_M2017_dl.xlsx",
+    "n": 158
+   },
+   {
+    "year": 2017,
+    "file": "MSA_M2017_dl.xlsx",
+    "n": 417
+   },
+   {
+    "year": 2017,
+    "file": "aMSA_M2017_dl.xlsx",
+    "n": 11
+   },
+   {
+    "year": 2018,
+    "file": "BOS_M2018_dl.xlsx",
+    "n": 133
+   },
+   {
+    "year": 2018,
+    "file": "MSA_M2018_dl.xlsx",
+    "n": 392
+   },
+   {
+    "year": 2019,
+    "file": "BOS_M2019_dl.xlsx",
+    "n": 132
+   },
+   {
+    "year": 2019,
+    "file": "MSA_M2019_dl.xlsx",
+    "n": 392
+   },
+   {
+    "year": 2020,
+    "file": "BOS_M2020_dl.xlsx",
+    "n": 133
+   },
+   {
+    "year": 2020,
+    "file": "MSA_M2020_dl.xlsx",
+    "n": 384
+   },
+   {
+    "year": 2021,
+    "file": "BOS_M2021_dl.xlsx",
+    "n": 135
+   },
+   {
+    "year": 2021,
+    "file": "MSA_M2021_dl.xlsx",
+    "n": 389
+   },
+   {
+    "year": 2022,
+    "file": "BOS_M2022_dl.xlsx",
+    "n": 135
+   },
+   {
+    "year": 2022,
+    "file": "MSA_M2022_dl.xlsx",
+    "n": 384
+   }
+  ]
+ },
+ "q4": {
+  "table": {
+   "wage_annual": {
+    "Mean": 27373.48148148148,
+    "SD": 4337.101782596009,
+    "N": 1215.0,
+    "Min": 19540.0,
+    "Max": 41700.0
+   },
+   "wage_hourly": {
+    "Mean": 13.16074074074074,
+    "SD": 2.0849308976284506,
+    "N": 1215.0,
+    "Min": 9.39,
+    "Max": 20.05
+   },
+   "per_capita_income": {
+    "Mean": 36156.13680781759,
+    "SD": 10504.066001854968,
+    "N": 1228.0,
+    "Min": 8318.0,
+    "Max": 89702.0
+   },
+   "pop_total": {
+    "Mean": 231862.63273615635,
+    "SD": 506835.1737470581,
+    "N": 1228.0,
+    "Min": 50.0,
+    "Max": 9936690.0
+   },
+   "kids_under6": {
+    "Mean": 15440.871335504886,
+    "SD": 34274.953502408054,
+    "N": 1228.0,
+    "Min": 0.0,
+    "Max": 616046.0
+   },
+   "kids_under6_allpar_lf": {
+    "Mean": 10419.918566775244,
+    "SD": 22637.014507636693,
+    "N": 1228.0,
+    "Min": 0.0,
+    "Max": 406465.0
+   },
+   "median_gross_rent": {
+    "Mean": 1051.766911165444,
+    "SD": 341.8991548473214,
+    "N": 1227.0,
+    "Min": 330.0,
+    "Max": 2805.0
+   },
+   "female_college_share": {
+    "Mean": 0.3013076243134887,
+    "SD": 0.1069809107539359,
+    "N": 1228.0,
+    "Min": 0.08117832246458287,
+    "Max": 0.776125322228832
+   },
+   "female_ftyr_share": {
+    "Mean": 0.43668659746552324,
+    "SD": 0.0682790785481218,
+    "N": 1228.0,
+    "Min": 0.1648003894839338,
+    "Max": 0.7142857142857143
+   },
+   "under6_share": {
+    "Mean": 0.06294003170528027,
+    "SD": 0.012072697698829477,
+    "N": 1228.0,
+    "Min": 0.0,
+    "Max": 0.10927536231884058
+   },
+   "under6_careneed_share": {
+    "Mean": 0.042281163594563305,
+    "SD": 0.009393015359461465,
+    "N": 1228.0,
+    "Min": 0.0,
+    "Max": 0.06950746638066166
+   }
+  },
+  "labels": {
+   "wage_annual": "Childcare-worker mean annual wage, OEWS ($)",
+   "wage_hourly": "Childcare-worker mean hourly wage, OEWS ($)",
+   "per_capita_income": "Per-capita income ($)",
+   "pop_total": "Total population",
+   "kids_under6": "Own children under 6",
+   "kids_under6_allpar_lf": "Under-6 w/ all resident parents in labor force",
+   "median_gross_rent": "Median gross rent ($/month)",
+   "female_college_share": "Share women 25+ with bachelor's+",
+   "female_ftyr_share": "Share women 16-64 full-time year-round",
+   "under6_share": "Share kids under 6 (of population)",
+   "under6_careneed_share": "Share kids under 6 who need care (of population)"
+  },
+  "n_counties": 1235,
+  "n_areas_with_wage": 377
+ },
+ "q5": {
+  "trend": [
+   {
+    "series": "wage_annual",
+    "year": 2015,
+    "N": 1222,
+    "mean_real": 25851.115847539768,
+    "ci_low": 25667.780969282292,
+    "ci_high": 26034.450725797244,
+    "mean_nominal": 20936.440261865795,
+    "mean_real_balanced": 25890.11307961632,
+    "N_balanced": 1189
+   },
+   {
+    "series": "wage_annual",
+    "year": 2016,
+    "N": 1219,
+    "mean_real": 26169.74203630436,
+    "ci_low": 25980.28243673456,
+    "ci_high": 26359.20163587416,
+    "mean_nominal": 21461.86218211649,
+    "mean_real_balanced": 26196.760624689236,
+    "N_balanced": 1189
+   },
+   {
+    "series": "wage_annual",
+    "year": 2017,
+    "N": 1224,
+    "mean_real": 26392.58963580196,
+    "ci_low": 26195.46748989864,
+    "ci_high": 26589.71178170528,
+    "mean_nominal": 22105.727124183006,
+    "mean_real_balanced": 26419.21994592648,
+    "N_balanced": 1189
+   },
+   {
+    "series": "wage_annual",
+    "year": 2018,
+    "N": 1228,
+    "mean_real": 26505.895749484473,
+    "ci_low": 26298.592014167665,
+    "ci_high": 26713.19948480128,
+    "mean_nominal": 22742.874592833876,
+    "mean_real_balanced": 26525.256792527398,
+    "N_balanced": 1189
+   },
+   {
+    "series": "wage_annual",
+    "year": 2019,
+    "N": 1229,
+    "mean_real": 26888.870000801682,
+    "ci_low": 26670.768837680367,
+    "ci_high": 27106.971163922997,
+    "mean_nominal": 23489.52807160293,
+    "mean_real_balanced": 26922.124687220137,
+    "N_balanced": 1189
+   },
+   {
+    "series": "wage_annual",
+    "year": 2020,
+    "N": 1215,
+    "mean_real": 27641.460913220544,
+    "ci_low": 27392.472784088117,
+    "ci_high": 27890.44904235297,
+    "mean_nominal": 24444.87242798354,
+    "mean_real_balanced": 27670.055042975386,
+    "N_balanced": 1189
+   },
+   {
+    "series": "wage_annual",
+    "year": 2021,
+    "N": 1222,
+    "mean_real": 27646.206747269774,
+    "ci_low": 27395.641330985487,
+    "ci_high": 27896.772163554062,
+    "mean_nominal": 25597.69230769231,
+    "mean_real_balanced": 27659.926315244174,
+    "N_balanced": 1189
+   },
+   {
+    "series": "wage_annual",
+    "year": 2022,
+    "N": 1215,
+    "mean_real": 27373.48148148148,
+    "ci_low": 27129.367435498676,
+    "ci_high": 27617.595527464287,
+    "mean_nominal": 27373.48148148148,
+    "mean_real_balanced": 27392.96047098402,
+    "N_balanced": 1189
+   },
+   {
+    "series": "median_gross_rent",
+    "year": 2015,
+    "N": 1232,
+    "mean_real": 993.4276378382142,
+    "ci_low": 977.7314056342256,
+    "ci_high": 1009.1238700422028,
+    "mean_nominal": 804.5625,
+    "mean_real_balanced": 991.7669064424416,
+    "N_balanced": 1223
+   },
+   {
+    "series": "median_gross_rent",
+    "year": 2016,
+    "N": 1233,
+    "mean_real": 1001.1373048929489,
+    "ci_low": 985.065990828526,
+    "ci_high": 1017.2086189573719,
+    "mean_nominal": 821.0348742903487,
+    "mean_real_balanced": 999.518485732637,
+    "N_balanced": 1223
+   },
+   {
+    "series": "median_gross_rent",
+    "year": 2017,
+    "N": 1234,
+    "mean_real": 1010.7149556093452,
+    "ci_low": 994.2063106241479,
+    "ci_high": 1027.2236005945426,
+    "mean_nominal": 846.547811993517,
+    "mean_real_balanced": 1009.1588753431829,
+    "N_balanced": 1223
+   },
+   {
+    "series": "median_gross_rent",
+    "year": 2018,
+    "N": 1233,
+    "mean_real": 1020.4641045234347,
+    "ci_low": 1003.4256191408667,
+    "ci_high": 1037.5025899060026,
+    "mean_nominal": 875.5896188158962,
+    "mean_real_balanced": 1018.958342663103,
+    "N_balanced": 1223
+   },
+   {
+    "series": "median_gross_rent",
+    "year": 2019,
+    "N": 1235,
+    "mean_real": 1029.657950044055,
+    "ci_low": 1012.0336671236875,
+    "ci_high": 1047.2822329644225,
+    "mean_nominal": 899.4866396761133,
+    "mean_real_balanced": 1028.3857878320214,
+    "N_balanced": 1223
+   },
+   {
+    "series": "median_gross_rent",
+    "year": 2020,
+    "N": 1235,
+    "mean_real": 1040.4651748355843,
+    "ci_low": 1022.1646494749328,
+    "ci_high": 1058.7657001962357,
+    "mean_nominal": 920.1408906882591,
+    "mean_real_balanced": 1039.3322724415816,
+    "N_balanced": 1223
+   },
+   {
+    "series": "median_gross_rent",
+    "year": 2021,
+    "N": 1234,
+    "mean_real": 1045.0524541043465,
+    "ci_low": 1026.337153799259,
+    "ci_high": 1063.7677544094338,
+    "mean_nominal": 967.6166936790924,
+    "mean_real_balanced": 1044.1011678434197,
+    "N_balanced": 1223
+   },
+   {
+    "series": "median_gross_rent",
+    "year": 2022,
+    "N": 1227,
+    "mean_real": 1051.766911165444,
+    "ci_low": 1032.6176158281478,
+    "ci_high": 1070.9162065027404,
+    "mean_nominal": 1051.766911165444,
+    "mean_real_balanced": 1052.2910874897793,
+    "N_balanced": 1223
+   }
+  ],
+  "cpi": {
+   "2015": 237.017,
+   "2016": 240.007,
+   "2017": 245.12,
+   "2018": 251.107,
+   "2019": 255.657,
+   "2020": 258.811,
+   "2021": 270.97,
+   "2022": 292.655
+  }
+ },
+ "q6": {
+  "paired": {
+   "n": 1212,
+   "mean2019": 26912.70125636697,
+   "mean2022": 27369.059405940596,
+   "dbar": 456.3581495736272,
+   "sd": 1852.3232083181895,
+   "se": 53.20659395531008,
+   "t": 8.577097604799453,
+   "df": 1211,
+   "p": 2.932588388094628e-17,
+   "scipy_t": 8.577097604799453,
+   "scipy_p": 2.932588388094628e-17,
+   "tcrit": 1.9619248463825503,
+   "ci": [
+    351.9708109013167,
+    560.7454882459376
+   ],
+   "share_up": 0.6221122112211221
+  },
+  "welch": {
+   "n2019": 1229,
+   "n2022": 1215,
+   "mean2019": 26888.870000801682,
+   "mean2022": 27373.48148148148,
+   "sd2019": 3897.2437628398343,
+   "sd2022": 4337.101782596009,
+   "t": 2.904403038017397,
+   "p": 0.0037130534223733655,
+   "df": 2408.5061326099444
+  },
+  "metro_paired": {
+   "n": 374,
+   "mean2019": 27207.57430854621,
+   "mean2022": 27704.732620320854,
+   "dbar": 497.1583117746406,
+   "t": 4.456677247626196,
+   "p": 1.1023034799916947e-05,
+   "share_up": 0.606951871657754
+  },
+  "nominal": {
+   "mean2019": 23510.346534653465,
+   "mean2022": 27369.059405940596
+  },
+  "cpi_change": 0.14471733611831472
+ },
+ "q7": {
+  "n": 1208,
+  "coef": 16499.988728162378,
+  "intercept": 22359.1936675599,
+  "se": 1058.1895093662222,
+  "t": 15.592659520925189,
+  "p": 4.482852792631941e-50,
+  "ci": [
+   14423.891826396402,
+   18576.085629928355
+  ],
+  "r2": 0.16777712004313594,
+  "se_hc1": 1092.4503042843005,
+  "p_hc1": 1.5320860039143892e-51,
+  "se_cluster": 2217.329499025861,
+  "p_cluster": 9.963977565203042e-14,
+  "t_cluster": 7.441378800675008,
+  "n_clusters": 373,
+  "slope_hand": 16499.988728162352,
+  "x_mean": 0.30198214737564083,
+  "x_sd": 0.10744129135556134,
+  "y_mean": 27341.895695364237,
+  "y_sd": 4328.01243044187,
+  "corr": 0.40960605469540573
+ }
+}

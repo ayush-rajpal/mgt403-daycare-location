@@ -1,0 +1,187 @@
+=== PRE-ANALYSIS Q1. Analysis dataset (year x county, metro counties, non-missing price & predictors) ===
+      metro_counties  preschool_price  wage  rent  all_predictors  analysis_rows  price_but_missing_predictor
+year                                                                                                         
+2015            1233             1003  1222  1232            1221            994                            9
+2016            1233             1025  1219  1233            1219           1019                            6
+2017            1234             1063  1224  1234            1224           1057                            6
+2018            1233             1063  1228  1233            1228           1062                            1
+2019            1235             1063  1229  1235            1229           1061                            2
+2020            1235             1063  1215  1235            1215           1050                           13
+2021            1235              918  1222  1234            1221            905                           13
+2022            1235             1013  1215  1227            1207            998                           15
+Rows with a price but a missing predictor, by variable:
+wage_annual              55
+median_gross_rent        10
+per_capita_income         7
+pop_total                 7
+kids_under6               7
+kids_under6_allpar_lf     7
+female_college_share      7
+female_ftyr_share         7
+under6_share              7
+under6_careneed_share     7
+
+=== PRE-ANALYSIS Q2. 2022 descriptive statistics (analysis dataset) ===
+                                                               Mean          SD      N        Min     Median          Max
+Median weekly price, center-based preschool ($)             174.479      59.755  998.0     86.190    162.115      496.300
+Median weekly price, center-based toddler ($)               185.467      65.471  996.0     97.000    170.000      520.000
+Median weekly price, center-based infant ($)                214.029      82.617  997.0     95.600    198.930      606.610
+Childcare-worker mean annual wage (OEWS, $)               27780.471    4350.795  998.0  19540.000  26870.000    41700.000
+Childcare-worker mean hourly wage (OEWS, $)                  13.356       2.092  998.0      9.390     12.920       20.050
+Median gross rent ($/month)                                1105.967     336.402  998.0    430.000   1019.000     2805.000
+Per-capita income ($)                                     37859.088    9457.048  998.0  16368.000  36266.500    89702.000
+Total population                                         255802.999  551110.383  998.0     50.000  99157.000  9936690.000
+Own children under 6                                      17151.192   37250.044  998.0      0.000   6571.500   616046.000
+Under-6 w/ all resident parents in labor force            11537.890   24539.442  998.0      0.000   4285.500   406465.000
+Share women 25+ with bachelor's+                              0.306       0.111  998.0      0.081      0.289        0.776
+Share women 16-64 full-time year-round                        0.446       0.056  998.0      0.212      0.450        0.714
+Share kids under 6 (of population)                            0.064       0.011  998.0      0.000      0.064        0.109
+Share kids under 6 who need care (of population)              0.043       0.009  998.0      0.000      0.044        0.070
+Childcare-worker employment in the metro area (OEWS)       3179.368    6332.909  997.0     30.000    820.000    37900.000
+Counties in the state reporting this exact price (NDCP)      13.694      21.894  998.0      1.000      4.000       99.000
+
+=== PRE-ANALYSIS Q3. Price vs wages and rents, 2022 ===
+wage_k: {'b': np.float64(10.153403138718664), 'a': np.float64(-107.58683187844919), 'r2': np.float64(0.5465287163241089), 'corr': np.float64(0.7392758053149793), 'n': 998}
+rent_h: {'b': np.float64(12.053375216572766), 'a': np.float64(41.17314466765246), 'r2': np.float64(0.46045425743096446), 'corr': np.float64(0.6785677986988214), 'n': 998}
+
+=== PRE-ANALYSIS Q4. OLS of preschool price on wages and rents, 2022 ===
+(a) MCPRESCHOOL ~ wage_k
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept   -107.5868      8.240    -13.056      0.000    -123.757     -91.416
+wage_k        10.1534      0.293     34.647      0.000       9.578      10.728
+==============================================================================
+R2=0.5465; cluster(OEWS area) SE={'Intercept': 17.103, 'wage_k': 0.647}
+(b) MCPRESCHOOL ~ rent_h
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     41.1731      4.779      8.615      0.000      31.795      50.551
+rent_h        12.0534      0.413     29.155      0.000      11.242      12.865
+==============================================================================
+R2=0.4605; cluster(OEWS area) SE={'Intercept': 9.797, 'rent_h': 0.996}
+(c) MCPRESCHOOL ~ wage_k + rent_h
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept    -87.9458      7.830    -11.232      0.000    -103.311     -72.581
+wage_k         7.0934      0.367     19.316      0.000       6.373       7.814
+rent_h         5.9104      0.475     12.444      0.000       4.978       6.842
+==============================================================================
+R2=0.6076; cluster(OEWS area) SE={'Intercept': 13.017, 'wage_k': 0.584, 'rent_h': 0.922}
+OVB: {'corr_wage_rent': np.float64(0.6695984919228553), 'delta_rent_on_wage': np.float64(0.5177310051538296), 'delta_wage_on_rent': np.float64(0.8660136942197295), 'wage_uni_check': np.float64(10.153403138718662), 'rent_uni_check': np.float64(12.05337521657277), 'vif': np.float64(1.812783482081121), 'sd_wage_k': np.float64(4.3507945848103375), 'sd_rent_h': np.float64(3.364017811842998), 'sd_price': np.float64(59.75492647769255)}
+
+=== FINAL. Year-by-year cost model: real price ~ real wage + real rent ===
+2015: {'n': 994, 'a': np.float64(-115.96487148696491), 'b_wage': np.float64(8.09719055454138), 'b_rent': np.float64(7.858535272520622), 'r2': np.float64(0.5578184847516873), 'rmse': np.float64(37.09671850889602)}
+2016: {'n': 1019, 'a': np.float64(-109.54133442434207), 'b_wage': np.float64(7.825149977584016), 'b_rent': np.float64(7.675370352446967), 'r2': np.float64(0.5760312805900586), 'rmse': np.float64(34.88994388728925)}
+2017: {'n': 1057, 'a': np.float64(-111.32427500250542), 'b_wage': np.float64(7.748249222936516), 'b_rent': np.float64(8.095736651924351), 'r2': np.float64(0.5993790697499854), 'rmse': np.float64(36.38015879972964)}
+2018: {'n': 1062, 'a': np.float64(-100.61260654582145), 'b_wage': np.float64(7.1984905685971965), 'b_rent': np.float64(8.23637135130543), 'r2': np.float64(0.6376838108743993), 'rmse': np.float64(33.68955656182045)}
+2019: {'n': 1061, 'a': np.float64(-92.94441353109396), 'b_wage': np.float64(7.032579006096791), 'b_rent': np.float64(7.723915008980361), 'r2': np.float64(0.6400580166197429), 'rmse': np.float64(33.5117221901176)}
+2020: {'n': 1050, 'a': np.float64(-70.4063180434366), 'b_wage': np.float64(6.0690309159726095), 'b_rent': np.float64(7.7994836093197195), 'r2': np.float64(0.6224032103894763), 'rmse': np.float64(35.49838202208585)}
+2021: {'n': 905, 'a': np.float64(-105.60450548849491), 'b_wage': np.float64(8.168468010333873), 'b_rent': np.float64(5.718114552391986), 'r2': np.float64(0.6717651812089809), 'rmse': np.float64(33.624080936777744)}
+2022: {'n': 998, 'a': np.float64(-87.94580292367024), 'b_wage': np.float64(7.0934164581809425), 'b_rent': np.float64(5.910379424984462), 'r2': np.float64(0.6076023737985259), 'rmse': np.float64(37.469072334686594)}
+
+Grouped 5-fold CV by OEWS area, 2022:
+                                     r2_oos  rmse_oos  mae_oos  r2_in  k_params
+Mean only                            -0.006    59.917   45.289  0.000       1.0
+Wage only                             0.541    40.447   29.933  0.547       2.0
+Rent only                             0.447    44.424   35.830  0.460       2.0
+Wage + rent (cost model)              0.598    37.859   28.599  0.608       3.0
+Log wage + log rent                   0.602    37.658   28.185  0.580       3.0
+Cost model + demand characteristics   0.671    34.255   26.487  0.683       8.0
+
+=== FINAL (c). What predicts a positive premium? 2022, SE clustered by OEWS area ===
+===============================================================================
+                  coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+Intercept     -39.1483     16.023     -2.443      0.015     -70.552      -7.744
+pci_10k         4.9330      3.131      1.576      0.115      -1.204      11.070
+college_10      5.1906      2.203      2.357      0.018       0.874       9.507
+ftyr_10        -0.8034      2.414     -0.333      0.739      -5.536       3.929
+careneed_pp     3.3169      1.522      2.180      0.029       0.335       6.299
+log_pop        -0.5390      1.135     -0.475      0.635      -2.764       1.686
+===============================================================================
+standardized: {'Intercept': 0.0, 'pci_10k': 4.67, 'college_10': 5.74, 'ftyr_10': -0.45, 'careneed_pp': 2.97, 'log_pop': -0.78}; within-state: {'pci_10k': 2.88, 'college_10': 6.64, 'ftyr_10': -1.53, 'careneed_pp': -0.56, 'log_pop': 1.04}
+Price evidence behind the picks:
+  county_fips codes_2022  est_2022  pctile_imputed_2022  survey_year  survey_prem survey_codes  direct_year  direct_prem direct_codes
+0       27145          5      True                False         2021        135.0           NI         2021        135.0           NI
+1       25021          2     False                False         2022        116.5            2         2022        116.5            2
+2       17113      2,4,5      True                 True         2021        101.2          2,4         2018         55.1            2
+3       24027        4,5      True                 True         2021         79.5            4         2017         42.2            2
+4       53033        2,5      True                False         2021         64.6            2         2021         64.6            2
+5       17043      2,4,5      True                 True         2021         68.9          2,4         2018         21.3            2
+6       17019      2,4,5      True                 True         2021         52.5          2,4         2018         16.5            2
+7       24031        4,5      True                 True         2021         44.5            4         2017         -7.1            2
+8       25027          2     False                False         2022         41.5            2         2022         41.5            2
+9       26161         NA     False                False         2022         31.1           NA         2022         31.1           NA
+
+=== FINAL (a). TOP-10 (avg real premium 2019-2022, eligibility rules, one county per metro) ===
+             rank                             NAME                                    area_title  score  n_years  MCPRESCHOOL   pred   prem  prem_pct  prem_fe  zone_n  codes  kids_under6_allpar_lf
+county_fips                                                                                                                                                                                         
+27145           1        Stearns County, Minnesota                                 St. Cloud, MN  127.3        4        336.7  166.9  169.7     105.6    122.9     1.0      5                 9982.0
+25021           2    Norfolk County, Massachusetts                Boston-Cambridge-Nashua, MA-NH  114.0        4        420.0  303.5  116.5      41.2     84.3     1.0      2                32889.0
+17113           3          McLean County, Illinois                               Bloomington, IL   95.4        4        279.0  167.7  111.3      69.7     86.9     1.0  2,4,5                 7742.0
+24027           4          Howard County, Maryland                 Baltimore-Columbia-Towson, MD   81.7        4        335.7  246.8   88.9      45.3     75.2     2.0    4,5                16287.0
+53033           5          King County, Washington                   Seattle-Tacoma-Bellevue, WA   65.1        4        389.7  306.7   83.0      29.5     67.3     1.0    2,5                90718.0
+17043           6          DuPage County, Illinois            Chicago-Naperville-Elgin, IL-IN-WI   63.7        4        315.8  229.5   86.3      43.1     57.5     1.0  2,4,5                42574.0
+17019           7       Champaign County, Illinois                          Champaign-Urbana, IL   49.1        4        239.0  174.1   64.9      40.3     42.2     1.0  2,4,5                 9532.0
+24031           8      Montgomery County, Maryland  Washington-Arlington-Alexandria, DC-VA-MD-WV   43.3        4        335.7  279.6   56.1      25.1     62.7     2.0    4,5                54089.0
+25027           9  Worcester County, Massachusetts                              Worcester, MA-CT   42.7        4        285.0  243.5   41.5      19.5     19.8     1.0      2                37348.0
+26161          10       Washtenaw County, Michigan                                 Ann Arbor, MI   41.8        4        224.5  193.3   31.1      20.5     43.4     1.0     NA                13199.0
+Funnel: {'scored_2022': 998, 'years_ok': 973, 'years_stable': 296, 'local_price': 57, 'size': 44, 'metros': 32}
+Next 10:
+                                       NAME                           area_title  score
+county_fips                                                                            
+30063              Missoula County, Montana                         Missoula, MT   38.8
+41051              Multnomah County, Oregon  Portland-Vancouver-Hillsboro, OR-WA   38.7
+02020        Anchorage Municipality, Alaska                        Anchorage, AK   38.2
+30013               Cascade County, Montana                      Great Falls, MT   36.0
+17201            Winnebago County, Illinois                         Rockford, IL   35.7
+17143               Peoria County, Illinois                           Peoria, IL   33.6
+30111           Yellowstone County, Montana                         Billings, MT   33.6
+41003                 Benton County, Oregon                        Corvallis, OR   33.4
+17119              Madison County, Illinois                     St. Louis, MO-IL   31.8
+54081         Raleigh County, West Virginia                          Beckley, WV   31.5
+Watch list (premium, but price not locally measured):
+                                         NAME                                    area_title  score  zone_n codes
+county_fips                                                                                                     
+51013              Arlington County, Virginia  Washington-Arlington-Alexandria, DC-VA-MD-WV  159.3     1.0   5,6
+27109               Olmsted County, Minnesota                                 Rochester, MN  121.4     8.0     5
+55139             Winnebago County, Wisconsin                            Oshkosh-Neenah, WI  118.8    10.0    NI
+55079             Milwaukee County, Wisconsin             Milwaukee-Waukesha-West Allis, WI  114.6    10.0    NI
+27123                Ramsey County, Minnesota       Minneapolis-St. Paul-Bloomington, MN-WI   99.5     8.0     5
+55025                  Dane County, Wisconsin                                   Madison, WI   97.5    10.0    NI
+39013                    Belmont County, Ohio                               Wheeling, WV-OH   95.6    29.0    NI
+55035            Eau Claire County, Wisconsin                                Eau Claire, WI   94.6    10.0    NI
+55009                 Brown County, Wisconsin                                 Green Bay, WI   89.4    10.0    NI
+06075        San Francisco County, California             San Francisco-Oakland-Hayward, CA   89.0     1.0   5,6
+
+Robustness overlaps with baseline top-10: {'Log model (% premium)': {'overlap': 6, 'of': 10}, '2022 premium only': {'overlap': 8, 'of': 10}, 'Survey years only': {'overlap': 9, 'of': 10}, 'Within-state premium (state FE)': {'overlap': 9, 'of': 10}, 'Top-10 still above within-state prediction': {'overlap': 10, 'of': 10}}
+
+=== FINAL (b). Back-test: choose with 2015-2018 data, evaluate on 2022 ===
+{'n_picked': 10, 'n_with_2022': 6, 'picks_prem_2022_mean': np.float64(70.26532083732428), 'picks_prem_2019_22_mean': np.float64(61.103464337574074), 'picks_share_pos_2022': np.float64(1.0), 'picks_formation_score': np.float64(83.25564817919486), 'all_counties_prem_2022_mean': np.float64(2.651933449057336e-13), 'eligible_pool_prem_2022_mean': np.float64(30.733342845974864), 'overlap_with_2022_top10': 1, 'corr_formation_2022': np.float64(0.6396072554376033), 'slope_2022_on_formation': np.float64(0.6861307767103951), 'spearman': np.float64(0.6099269912930603)}
+Back-test picks:
+  county_fips                             NAME                                    area_title  score  prem2022
+0       51013       Arlington County, Virginia  Washington-Arlington-Alexandria, DC-VA-MD-WV  109.5     200.7
+1       41051         Multnomah County, Oregon           Portland-Vancouver-Hillsboro, OR-WA  107.0      37.9
+2       25021    Norfolk County, Massachusetts                Boston-Cambridge-Nashua, MA-NH  102.5     116.5
+3       41003            Benton County, Oregon                                 Corvallis, OR   96.4      35.6
+4       42125  Washington County, Pennsylvania                                Pittsburgh, PA   74.5       NaN
+5       09001    Fairfield County, Connecticut               Bridgeport-Stamford-Norwalk, CT   74.2       NaN
+6       19169               Story County, Iowa                                      Ames, IA   72.8       8.3
+7       42029     Chester County, Pennsylvania   Philadelphia-Camden-Wilmington, PA-NJ-DE-MD   68.2       NaN
+8       42085      Mercer County, Pennsylvania             Youngstown-Warren-Boardman, OH-PA   64.0       NaN
+9       41039              Lane County, Oregon                                    Eugene, OR   63.5      22.5
+
+=== FINAL (d). Stability of county premiums ===
+   lag  corr_all  n_all  corr_survey  n_survey
+0    1     0.930   6787        0.880      1045
+1    2     0.845   5883        0.797      1463
+2    3     0.761   4828        0.721      1008
+3    4     0.694   3769        0.633       762
+4    5     0.644   2710        0.505       887
+5    6     0.598   1673        0.710       407
+6    7     0.548    903        0.601       260
+Top-quintile persistence: 0.67 stay top quintile; 0.88 stay top two
+corr(2015-18 avg, 2019-22 avg) = 0.760

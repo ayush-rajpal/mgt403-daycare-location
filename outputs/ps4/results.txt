@@ -1,0 +1,100 @@
+=== Q1. Sample construction ===
+NDCP county-years 2015-2022: 25,763
+  matched to crosswalk: 25,763; unmatched: 0
+Metro sample (oews_area begins '00'): 9,873 county-years
+      counties  n_Infant  n_Toddler  n_Preschool
+year                                            
+2015      1233      1003       1003         1003
+2016      1233      1025       1025         1025
+2017      1234      1063       1063         1063
+2018      1233      1062       1063         1063
+2019      1235      1062       1063         1063
+2020      1235      1062       1063         1063
+2021      1235       916        916          918
+2022      1235      1012       1011         1013
+
+=== Q2. 2022 center-based median weekly prices (nominal = 2022 $) ===
+                N    Mean     SD    SE  t_crit  CI95_low  CI95_high  Median    Min     Max
+Infant     1012.0  214.95  82.96  2.61    1.96    209.84     220.07  198.93  95.60  606.61
+Toddler    1011.0  186.46  66.37  2.09    1.96    182.36     190.55  170.00  97.00  520.00
+Preschool  1013.0  175.09  59.98  1.88    1.96    171.39     178.79  162.50  86.19  496.30
+
+Counties with all three prices in 2022: 1011
+  Infant - Toddler: mean diff $28.53/wk (15.3% of Toddler mean), share of counties with diff>0: 92.4%, share = 0: 4.9%, paired t = 29.47, p = 3.1e-138
+  Toddler - Preschool: mean diff $11.31/wk (6.5% of Preschool mean), share of counties with diff>0: 64.5%, share = 0: 28.6%, paired t = 19.01, p = 4e-69
+  Infant - Preschool: mean diff $39.83/wk (22.7% of Preschool mean), share of counties with diff>0: 96.4%, share = 0: 0.0%, paired t = 34.36, p = 5.2e-172
+
+=== Q3. Trends in real (2022 $) prices ===
+CPI-U annual averages:
+year
+2015    237.017
+2016    240.007
+2017    245.120
+2018    251.107
+2019    255.657
+2020    258.811
+2021    270.970
+2022    292.655
+age   Infant  Preschool  Toddler
+year                            
+2015  214.16     175.96   188.64
+2016  212.40     174.58   187.69
+2017  218.29     179.54   193.15
+2018  217.89     179.12   192.14
+2019  219.80     180.47   193.01
+2020  223.38     183.25   195.56
+2021  204.14     172.81   183.64
+2022  214.95     175.09   186.46
+
+Balanced panel (same counties every year):
+age   Infant  Preschool  Toddler
+year                            
+2015  202.30     168.41   182.56
+2016  202.97     169.61   183.63
+2017  203.74     170.17   184.27
+2018  204.52     171.20   184.45
+2019  207.80     174.01   186.51
+2020  212.26     177.71   189.74
+2021  210.41     176.85   187.60
+2022  200.42     168.99   178.82
+N balanced: age; Infant       741; Preschool    743; Toddler      741
+
+Change 2015 -> 2022, mean across counties:
+  Infant: nominal $173.44 -> $214.95 (+23.9%); real $214.16 -> $214.95 (+0.4%); real peak 2020 ($223.38); balanced real 202.30 -> 200.42 (-0.9%)
+  Toddler: nominal $152.78 -> $186.46 (+22.0%); real $188.64 -> $186.46 (-1.2%); real peak 2020 ($195.56); balanced real 182.56 -> 178.82 (-2.1%)
+  Preschool: nominal $142.51 -> $175.09 (+22.9%); real $175.96 -> $175.09 (-0.5%); real peak 2020 ($183.25); balanced real 168.41 -> 168.99 (+0.3%)
+CPI-U inflation 2015 -> 2022: +23.5%
+
+=== Q4. CCDF voucher test (two-sided one-sample t-test, alpha = 0.05) ===
+
+2022: voucher $706/month / 4.33 = mu0 = $163.0485/week
+  n = 1013, xbar = 175.0885, s = 59.9800, SE = s/sqrt(n) = 59.9800/31.8277 = 1.8845
+  t = (xbar - mu0)/SE = (175.0885 - 163.0485)/1.8845 = 6.3889, df = 1012
+  p = 2*P(T_1012 > |t|) = 2.54434e-10; critical |t| = 1.9623
+  scipy.stats.ttest_1samp: t = 6.3889, p = 2.54434e-10
+  monthly equivalent: mean price x 4.33 = $758.13 vs voucher $706
+  share of counties with weekly price above mu0: 49.0%
+
+2015: voucher $473/month / 4.33 = mu0 = $109.2379/week
+  n = 1003, xbar = 142.5075, s = 45.1741, SE = s/sqrt(n) = 45.1741/31.6702 = 1.4264
+  t = (xbar - mu0)/SE = (142.5075 - 109.2379)/1.4264 = 23.3243, df = 1002
+  p = 2*P(T_1002 > |t|) = 1.83969e-96; critical |t| = 1.9623
+  scipy.stats.ttest_1samp: t = 23.3243, p = 1.83969e-96
+  monthly equivalent: mean price x 4.33 = $617.06 vs voucher $473
+  share of counties with weekly price above mu0: 75.1%
+
+Robustness: metro area as the unit (mean of county prices within each OEWS area)
+  2022: metro areas n = 341, xbar = 175.33, s = 52.37, t = 4.331, p = 1.955e-05
+  2015: metro areas n = 341, xbar = 144.47, s = 41.73, t = 15.592, p = 9.933e-42
+
+States whose count of metro counties with preschool prices changed 2020 -> 2021:
+                   count         mean        
+year                2020 2021    2020    2021
+STATE_ABBREVIATION                           
+CA                    37    0  227.18     NaN
+IL                    40   33  171.96  190.50
+MO                     7    0  167.78     NaN
+NC                    46    0  119.68     NaN
+PA                    37    0  176.21     NaN
+PR                     0   69     NaN   78.12
+VA                    80    0  171.50     NaN

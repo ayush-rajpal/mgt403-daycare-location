@@ -1,0 +1,11 @@
+# Python 3.11+ (tested with Python 3.14.7). Versions below are the ones used to produce the committed outputs.
+pandas>=2.2          # tested 3.0.5
+numpy>=1.26          # tested 2.5.2
+scipy>=1.11          # tested 1.18.1
+statsmodels>=0.14    # tested 0.15.0
+matplotlib>=3.8      # tested 3.11.1
+openpyxl>=3.1        # tested 3.1.5 (only needed to rebuild extracts from the NDCP workbook)
+pyshp>=2.3           # tested 3.1.6 (map of county premiums)
+reportlab>=4.0       # tested 5.0.1 (PDF reports)
+pillow>=10           # tested 12.3.0
+# Node.js 18+ is also required for the slide deck: `npm install` (pptxgenjs, see package.json). run_all.py does this.

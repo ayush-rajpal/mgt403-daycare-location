@@ -1,0 +1,1925 @@
+{
+ "q1": {
+  "coverage": [
+   {
+    "year": 2015,
+    "metro_counties": 1233,
+    "preschool_price": 1003,
+    "wage": 1222,
+    "rent": 1232,
+    "all_predictors": 1221,
+    "analysis_rows": 994,
+    "price_but_missing_predictor": 9
+   },
+   {
+    "year": 2016,
+    "metro_counties": 1233,
+    "preschool_price": 1025,
+    "wage": 1219,
+    "rent": 1233,
+    "all_predictors": 1219,
+    "analysis_rows": 1019,
+    "price_but_missing_predictor": 6
+   },
+   {
+    "year": 2017,
+    "metro_counties": 1234,
+    "preschool_price": 1063,
+    "wage": 1224,
+    "rent": 1234,
+    "all_predictors": 1224,
+    "analysis_rows": 1057,
+    "price_but_missing_predictor": 6
+   },
+   {
+    "year": 2018,
+    "metro_counties": 1233,
+    "preschool_price": 1063,
+    "wage": 1228,
+    "rent": 1233,
+    "all_predictors": 1228,
+    "analysis_rows": 1062,
+    "price_but_missing_predictor": 1
+   },
+   {
+    "year": 2019,
+    "metro_counties": 1235,
+    "preschool_price": 1063,
+    "wage": 1229,
+    "rent": 1235,
+    "all_predictors": 1229,
+    "analysis_rows": 1061,
+    "price_but_missing_predictor": 2
+   },
+   {
+    "year": 2020,
+    "metro_counties": 1235,
+    "preschool_price": 1063,
+    "wage": 1215,
+    "rent": 1235,
+    "all_predictors": 1215,
+    "analysis_rows": 1050,
+    "price_but_missing_predictor": 13
+   },
+   {
+    "year": 2021,
+    "metro_counties": 1235,
+    "preschool_price": 918,
+    "wage": 1222,
+    "rent": 1234,
+    "all_predictors": 1221,
+    "analysis_rows": 905,
+    "price_but_missing_predictor": 13
+   },
+   {
+    "year": 2022,
+    "metro_counties": 1235,
+    "preschool_price": 1013,
+    "wage": 1215,
+    "rent": 1227,
+    "all_predictors": 1207,
+    "analysis_rows": 998,
+    "price_but_missing_predictor": 15
+   }
+  ],
+  "rows": 8146,
+  "counties": 1159,
+  "missing_by_var": {
+   "wage_annual": 55,
+   "median_gross_rent": 10,
+   "per_capita_income": 7,
+   "pop_total": 7,
+   "kids_under6": 7,
+   "kids_under6_allpar_lf": 7,
+   "female_college_share": 7,
+   "female_ftyr_share": 7,
+   "under6_share": 7,
+   "under6_careneed_share": 7
+  },
+  "drop_states_2022": {
+   "AL": 1,
+   "AZ": 1,
+   "CA": 1,
+   "CT": 7,
+   "FL": 1,
+   "LA": 1,
+   "WA": 1,
+   "WI": 2
+  }
+ },
+ "q2": {
+  "table": {
+   "MCPRESCHOOL": {
+    "Mean": 174.47948897795595,
+    "SD": 59.75492647769255,
+    "N": 998.0,
+    "Min": 86.19,
+    "Median": 162.115,
+    "Max": 496.3
+   },
+   "MCTODDLER": {
+    "Mean": 185.46733935742972,
+    "SD": 65.47075865179434,
+    "N": 996.0,
+    "Min": 97.0,
+    "Median": 170.0,
+    "Max": 520.0
+   },
+   "MCINFANT": {
+    "Mean": 214.02928786359078,
+    "SD": 82.61721231120475,
+    "N": 997.0,
+    "Min": 95.6,
+    "Median": 198.93,
+    "Max": 606.61
+   },
+   "wage_annual": {
+    "Mean": 27780.470941883766,
+    "SD": 4350.794584810337,
+    "N": 998.0,
+    "Min": 19540.0,
+    "Median": 26870.0,
+    "Max": 41700.0
+   },
+   "wage_hourly": {
+    "Mean": 13.35620240480962,
+    "SD": 2.09186788321747,
+    "N": 998.0,
+    "Min": 9.39,
+    "Median": 12.92,
+    "Max": 20.05
+   },
+   "median_gross_rent": {
+    "Mean": 1105.9669338677354,
+    "SD": 336.4017811842998,
+    "N": 998.0,
+    "Min": 430.0,
+    "Median": 1019.0,
+    "Max": 2805.0
+   },
+   "per_capita_income": {
+    "Mean": 37859.08817635271,
+    "SD": 9457.048166224775,
+    "N": 998.0,
+    "Min": 16368.0,
+    "Median": 36266.5,
+    "Max": 89702.0
+   },
+   "pop_total": {
+    "Mean": 255802.99899799598,
+    "SD": 551110.3829093665,
+    "N": 998.0,
+    "Min": 50.0,
+    "Median": 99157.0,
+    "Max": 9936690.0
+   },
+   "kids_under6": {
+    "Mean": 17151.19238476954,
+    "SD": 37250.0438704724,
+    "N": 998.0,
+    "Min": 0.0,
+    "Median": 6571.5,
+    "Max": 616046.0
+   },
+   "kids_under6_allpar_lf": {
+    "Mean": 11537.889779559118,
+    "SD": 24539.44199058944,
+    "N": 998.0,
+    "Min": 0.0,
+    "Median": 4285.5,
+    "Max": 406465.0
+   },
+   "female_college_share": {
+    "Mean": 0.3061879967915906,
+    "SD": 0.1105643280341371,
+    "N": 998.0,
+    "Min": 0.0811783224645828,
+    "Median": 0.28940523444663135,
+    "Max": 0.776125322228832
+   },
+   "female_ftyr_share": {
+    "Mean": 0.4462188533480585,
+    "SD": 0.05589828016573444,
+    "N": 998.0,
+    "Min": 0.2115844901866922,
+    "Median": 0.44955369074656804,
+    "Max": 0.7142857142857143
+   },
+   "under6_share": {
+    "Mean": 0.0643623281764018,
+    "SD": 0.011446855824307822,
+    "N": 998.0,
+    "Min": 0.0,
+    "Median": 0.06400829750727516,
+    "Max": 0.1092753623188405
+   },
+   "under6_careneed_share": {
+    "Mean": 0.04323196167563195,
+    "SD": 0.00895145627424727,
+    "N": 998.0,
+    "Min": 0.0,
+    "Median": 0.043755416702003946,
+    "Max": 0.0695074663806616
+   },
+   "childcare_emp": {
+    "Mean": 3179.3681043129386,
+    "SD": 6332.90919383304,
+    "N": 997.0,
+    "Min": 30.0,
+    "Median": 820.0,
+    "Max": 37900.0
+   },
+   "zone_n": {
+    "Mean": 13.69438877755511,
+    "SD": 21.89350967466794,
+    "N": 998.0,
+    "Min": 1.0,
+    "Median": 4.0,
+    "Max": 99.0
+   }
+  },
+  "labels": {
+   "MCPRESCHOOL": "Median weekly price, center-based preschool ($)",
+   "MCTODDLER": "Median weekly price, center-based toddler ($)",
+   "MCINFANT": "Median weekly price, center-based infant ($)",
+   "wage_annual": "Childcare-worker mean annual wage (OEWS, $)",
+   "wage_hourly": "Childcare-worker mean hourly wage (OEWS, $)",
+   "median_gross_rent": "Median gross rent ($/month)",
+   "per_capita_income": "Per-capita income ($)",
+   "pop_total": "Total population",
+   "kids_under6": "Own children under 6",
+   "kids_under6_allpar_lf": "Under-6 w/ all resident parents in labor force",
+   "female_college_share": "Share women 25+ with bachelor's+",
+   "female_ftyr_share": "Share women 16-64 full-time year-round",
+   "under6_share": "Share kids under 6 (of population)",
+   "under6_careneed_share": "Share kids under 6 who need care (of population)",
+   "childcare_emp": "Childcare-worker employment in the metro area (OEWS)",
+   "zone_n": "Counties in the state reporting this exact price (NDCP)"
+  },
+  "n": 998,
+  "n_areas": 330,
+  "n_states": 44
+ },
+ "q3": {
+  "wage_k": {
+   "b": 10.153403138718664,
+   "a": -107.58683187844919,
+   "r2": 0.5465287163241089,
+   "corr": 0.7392758053149793,
+   "n": 998
+  },
+  "rent_h": {
+   "b": 12.053375216572766,
+   "a": 41.17314466765246,
+   "r2": 0.46045425743096446,
+   "corr": 0.6785677986988214,
+   "n": 998
+  }
+ },
+ "q4": {
+  "a": {
+   "formula": "MCPRESCHOOL ~ wage_k",
+   "n": 998,
+   "r2": 0.5465287163241089,
+   "adj_r2": 0.5460734238706191,
+   "coef": {
+    "Intercept": -107.58683187844919,
+    "wage_k": 10.153403138718664
+   },
+   "se": {
+    "Intercept": 8.240368314996092,
+    "wage_k": 0.29305582826649856
+   },
+   "t": {
+    "Intercept": -13.05607076842174,
+    "wage_k": 34.64665145470296
+   },
+   "p": {
+    "Intercept": 4.4627228657314646e-36,
+    "wage_k": 3.1284566936015294e-173
+   },
+   "ci": {
+    "Intercept": [
+     -123.75730735839954,
+     -91.41635639849883
+    ],
+    "wage_k": [
+     9.57832543538154,
+     10.728480842055788
+    ]
+   },
+   "se_cluster": {
+    "Intercept": 17.103310424833005,
+    "wage_k": 0.6470056181932077
+   },
+   "t_cluster": {
+    "Intercept": -6.290409821612044,
+    "wage_k": 15.692913404790053
+   },
+   "p_cluster": {
+    "Intercept": 3.166289429079427e-10,
+    "wage_k": 1.6911246083799648e-55
+   },
+   "se_hc1": {
+    "Intercept": 10.728736393629443,
+    "wage_k": 0.40719223768511015
+   },
+   "rmse": 40.25932800207135
+  },
+  "b": {
+   "formula": "MCPRESCHOOL ~ rent_h",
+   "n": 998,
+   "r2": 0.46045425743096446,
+   "adj_r2": 0.4599125448380237,
+   "coef": {
+    "Intercept": 41.17314466765246,
+    "rent_h": 12.053375216572766
+   },
+   "se": {
+    "Intercept": 4.779012520419044,
+    "rent_h": 0.41342800858051093
+   },
+   "t": {
+    "Intercept": 8.615408411619358,
+    "rent_h": 29.154713677860297
+   },
+   "p": {
+    "Intercept": 2.6977996393996784e-17,
+    "rent_h": 1.3203168127637037e-135
+   },
+   "ci": {
+    "Intercept": [
+     31.79505599178864,
+     50.55123334351627
+    ],
+    "rent_h": [
+     11.242085330013973,
+     12.864665103131559
+    ]
+   },
+   "se_cluster": {
+    "Intercept": 9.797141606299231,
+    "rent_h": 0.9955785440529096
+   },
+   "t_cluster": {
+    "Intercept": 4.202567067233112,
+    "rent_h": 12.106905365301037
+   },
+   "p_cluster": {
+    "Intercept": 2.639050226371586e-05,
+    "rent_h": 9.70884518742842e-34
+   },
+   "se_hc1": {
+    "Intercept": 5.563693473314462,
+    "rent_h": 0.5355078297069784
+   },
+   "rmse": 43.91427946117083
+  },
+  "c": {
+   "formula": "MCPRESCHOOL ~ wage_k + rent_h",
+   "n": 998,
+   "r2": 0.6076023737985259,
+   "adj_r2": 0.6068136348513873,
+   "coef": {
+    "Intercept": -87.94580292367024,
+    "wage_k": 7.0934164581809425,
+    "rent_h": 5.910379424984462
+   },
+   "se": {
+    "Intercept": 7.829971850865566,
+    "wage_k": 0.3672228950181628,
+    "rent_h": 0.47494141601708134
+   },
+   "t": {
+    "Intercept": -11.231943690059149,
+    "wage_k": 19.316378565748476,
+    "rent_h": 12.44443888374623
+   },
+   "p": {
+    "Intercept": 1.207659850392858e-27,
+    "wage_k": 7.563237074742721e-71,
+    "rent_h": 3.8094417289445716e-33
+   },
+   "ci": {
+    "Intercept": [
+     -103.31095625215609,
+     -72.5806495951844
+    ],
+    "wage_k": [
+     6.372796231805443,
+     7.8140366845564415
+    ],
+    "rent_h": [
+     4.978377647948197,
+     6.842381202020726
+    ]
+   },
+   "se_cluster": {
+    "Intercept": 13.017121766580674,
+    "wage_k": 0.5839071466266267,
+    "rent_h": 0.9219482764356463
+   },
+   "t_cluster": {
+    "Intercept": -6.756163497637141,
+    "wage_k": 12.148192566508786,
+    "rent_h": 6.410749470495937
+   },
+   "p_cluster": {
+    "Intercept": 1.4169351970075268e-11,
+    "wage_k": 5.8647811575840185e-34,
+    "rent_h": 1.4480598816085478e-10
+   },
+   "se_hc1": {
+    "Intercept": 8.729903658320243,
+    "wage_k": 0.3624330248767755,
+    "rent_h": 0.5507378769345826
+   },
+   "rmse": 37.469072334686594
+  },
+  "ovb": {
+   "corr_wage_rent": 0.6695984919228553,
+   "delta_rent_on_wage": 0.5177310051538296,
+   "delta_wage_on_rent": 0.8660136942197295,
+   "wage_uni_check": 10.153403138718662,
+   "rent_uni_check": 12.05337521657277,
+   "vif": 1.812783482081121,
+   "sd_wage_k": 4.3507945848103375,
+   "sd_rent_h": 3.364017811842998,
+   "sd_price": 59.75492647769255
+  },
+  "passthrough_per_child_week": {
+   "7": 2.7472527472527473,
+   "10": 1.923076923076923,
+   "15": 1.282051282051282
+  }
+ },
+ "yr_models": {
+  "2015": {
+   "n": 994,
+   "a": -115.96487148696491,
+   "b_wage": 8.09719055454138,
+   "b_rent": 7.858535272520622,
+   "r2": 0.5578184847516873,
+   "rmse": 37.09671850889602
+  },
+  "2016": {
+   "n": 1019,
+   "a": -109.54133442434207,
+   "b_wage": 7.825149977584016,
+   "b_rent": 7.675370352446967,
+   "r2": 0.5760312805900586,
+   "rmse": 34.88994388728925
+  },
+  "2017": {
+   "n": 1057,
+   "a": -111.32427500250542,
+   "b_wage": 7.748249222936516,
+   "b_rent": 8.095736651924351,
+   "r2": 0.5993790697499854,
+   "rmse": 36.38015879972964
+  },
+  "2018": {
+   "n": 1062,
+   "a": -100.61260654582145,
+   "b_wage": 7.1984905685971965,
+   "b_rent": 8.23637135130543,
+   "r2": 0.6376838108743993,
+   "rmse": 33.68955656182045
+  },
+  "2019": {
+   "n": 1061,
+   "a": -92.94441353109396,
+   "b_wage": 7.032579006096791,
+   "b_rent": 7.723915008980361,
+   "r2": 0.6400580166197429,
+   "rmse": 33.5117221901176
+  },
+  "2020": {
+   "n": 1050,
+   "a": -70.4063180434366,
+   "b_wage": 6.0690309159726095,
+   "b_rent": 7.7994836093197195,
+   "r2": 0.6224032103894763,
+   "rmse": 35.49838202208585
+  },
+  "2021": {
+   "n": 905,
+   "a": -105.60450548849491,
+   "b_wage": 8.168468010333873,
+   "b_rent": 5.718114552391986,
+   "r2": 0.6717651812089809,
+   "rmse": 33.624080936777744
+  },
+  "2022": {
+   "n": 998,
+   "a": -87.94580292367024,
+   "b_wage": 7.0934164581809425,
+   "b_rent": 5.910379424984462,
+   "r2": 0.6076023737985259,
+   "rmse": 37.469072334686594
+  }
+ },
+ "state_fe": {
+  "r2": 0.8013496836546087,
+  "b_wage": 2.074867249347282,
+  "b_rent": 9.627023000176745,
+  "r2_nofe": 0.6076023737985259
+ },
+ "prem_between_state_share": 0.4291976018352069,
+ "cv": {
+  "Mean only": {
+   "r2_oos": -0.006441918896146426,
+   "rmse_oos": 59.9170445636692,
+   "mae_oos": 45.28884357953311,
+   "r2_in": 2.220446049250313e-16,
+   "k_params": 1
+  },
+  "Wage only": {
+   "r2_oos": 0.5413760915325785,
+   "rmse_oos": 40.44681889773188,
+   "mae_oos": 29.932796009051568,
+   "r2_in": 0.5465287163241089,
+   "k_params": 2
+  },
+  "Rent only": {
+   "r2_oos": 0.44674668004472917,
+   "rmse_oos": 44.42403874596427,
+   "mae_oos": 35.83026104055882,
+   "r2_in": 0.46045425743096446,
+   "k_params": 2
+  },
+  "Wage + rent (cost model)": {
+   "r2_oos": 0.5981810891597825,
+   "rmse_oos": 37.859180671712444,
+   "mae_oos": 28.5994239621102,
+   "r2_in": 0.6076023737985259,
+   "k_params": 3
+  },
+  "Log wage + log rent": {
+   "r2_oos": 0.6024421596364062,
+   "rmse_oos": 37.65790766686914,
+   "mae_oos": 28.185263556675658,
+   "r2_in": 0.5799114602188784,
+   "k_params": 3
+  },
+  "Cost model + demand characteristics": {
+   "r2_oos": 0.6710516621480882,
+   "rmse_oos": 34.254676706815154,
+   "mae_oos": 26.487161356221133,
+   "r2_in": 0.6831167562290826,
+   "k_params": 8
+  }
+ },
+ "chars": {
+  "coef": {
+   "Intercept": -39.14833001923591,
+   "pci_10k": 4.93297686749522,
+   "college_10": 5.19063011178521,
+   "ftyr_10": -0.8033741402232203,
+   "careneed_pp": 3.3169072019032035,
+   "log_pop": -0.5390089785038026
+  },
+  "se": {
+   "Intercept": 16.022736668356263,
+   "pci_10k": 3.1309800231246987,
+   "college_10": 2.202516347005602,
+   "ftyr_10": 2.414421089995582,
+   "careneed_pp": 1.5215785508025883,
+   "log_pop": 1.135184030694272
+  },
+  "p": {
+   "Intercept": 0.014553690305337492,
+   "pci_10k": 0.11513239804314337,
+   "college_10": 0.018439041169174483,
+   "ftyr_10": 0.7393306569230589,
+   "careneed_pp": 0.02926399206829375,
+   "log_pop": 0.6349147131304682
+  },
+  "r2": 0.07196985585700666,
+  "n": 998,
+  "std_coef": {
+   "Intercept": 2.643631841214855e-13,
+   "pci_10k": 4.665139983877487,
+   "college_10": 5.738985303832895,
+   "ftyr_10": -0.4490723276810416,
+   "careneed_pp": 2.9691149783572444,
+   "log_pop": -0.7792525992357592
+  },
+  "std_se": {
+   "Intercept": 2.118224310155052,
+   "pci_10k": 2.9609828886177585,
+   "college_10": 2.435197398908729,
+   "ftyr_10": 1.3496198652664337,
+   "careneed_pp": 1.3620343865342117,
+   "log_pop": 1.64115096743824
+  },
+  "std_p": {
+   "Intercept": 0.9999999999999004,
+   "pci_10k": 0.11513239804314053,
+   "college_10": 0.01843904116917268,
+   "ftyr_10": 0.7393306569230789,
+   "careneed_pp": 0.029263992068296052,
+   "log_pop": 0.6349147131304591
+  },
+  "bivariate_corr": {
+   "pci_10k": 0.24286608222616454,
+   "college_10": 0.2511677704052318,
+   "ftyr_10": 0.11706335972698714,
+   "careneed_pp": 0.09034975308768804,
+   "log_pop": 0.12345635383015417
+  },
+  "std_coef_fe": {
+   "pci_10k": 2.8788949672449755,
+   "college_10": 6.637373980335834,
+   "ftyr_10": -1.5287400521199432,
+   "careneed_pp": -0.5616689229051277,
+   "log_pop": 1.0400170998324467
+  },
+  "std_p_fe": {
+   "pci_10k": 0.5225016377330802,
+   "college_10": 0.009217128264680878,
+   "ftyr_10": 0.2039250580084797,
+   "careneed_pp": 0.680565278620821,
+   "log_pop": 0.549475559186583
+  }
+ },
+ "evidence": [
+  {
+   "county_fips": "27145",
+   "codes_2022": "5",
+   "est_2022": true,
+   "pctile_imputed_2022": false,
+   "survey_year": 2021,
+   "survey_prem": 135.04746187674192,
+   "survey_codes": "NI",
+   "direct_year": 2021,
+   "direct_prem": 135.04746187674192,
+   "direct_codes": "NI"
+  },
+  {
+   "county_fips": "25021",
+   "codes_2022": "2",
+   "est_2022": false,
+   "pctile_imputed_2022": false,
+   "survey_year": 2022,
+   "survey_prem": 116.48745345300938,
+   "survey_codes": "2",
+   "direct_year": 2022,
+   "direct_prem": 116.48745345300938,
+   "direct_codes": "2"
+  },
+  {
+   "county_fips": "17113",
+   "codes_2022": "2,4,5",
+   "est_2022": true,
+   "pctile_imputed_2022": true,
+   "survey_year": 2021,
+   "survey_prem": 101.1895501509791,
+   "survey_codes": "2,4",
+   "direct_year": 2018,
+   "direct_prem": 55.090543804853894,
+   "direct_codes": "2"
+  },
+  {
+   "county_fips": "24027",
+   "codes_2022": "4,5",
+   "est_2022": true,
+   "pctile_imputed_2022": true,
+   "survey_year": 2021,
+   "survey_prem": 79.49005528431695,
+   "survey_codes": "4",
+   "direct_year": 2017,
+   "direct_prem": 42.22773672998977,
+   "direct_codes": "2"
+  },
+  {
+   "county_fips": "53033",
+   "codes_2022": "2,5",
+   "est_2022": true,
+   "pctile_imputed_2022": false,
+   "survey_year": 2021,
+   "survey_prem": 64.63791066078869,
+   "survey_codes": "2",
+   "direct_year": 2021,
+   "direct_prem": 64.63791066078869,
+   "direct_codes": "2"
+  },
+  {
+   "county_fips": "17043",
+   "codes_2022": "2,4,5",
+   "est_2022": true,
+   "pctile_imputed_2022": true,
+   "survey_year": 2021,
+   "survey_prem": 68.91350595267221,
+   "survey_codes": "2,4",
+   "direct_year": 2018,
+   "direct_prem": 21.28581565013775,
+   "direct_codes": "2"
+  },
+  {
+   "county_fips": "17019",
+   "codes_2022": "2,4,5",
+   "est_2022": true,
+   "pctile_imputed_2022": true,
+   "survey_year": 2021,
+   "survey_prem": 52.53822376058136,
+   "survey_codes": "2,4",
+   "direct_year": 2018,
+   "direct_prem": 16.53102538798933,
+   "direct_codes": "2"
+  },
+  {
+   "county_fips": "24031",
+   "codes_2022": "4,5",
+   "est_2022": true,
+   "pctile_imputed_2022": true,
+   "survey_year": 2021,
+   "survey_prem": 44.4835815428915,
+   "survey_codes": "4",
+   "direct_year": 2017,
+   "direct_prem": -7.119447836143195,
+   "direct_codes": "2"
+  },
+  {
+   "county_fips": "25027",
+   "codes_2022": "2",
+   "est_2022": false,
+   "pctile_imputed_2022": false,
+   "survey_year": 2022,
+   "survey_prem": 41.516034999966365,
+   "survey_codes": "2",
+   "direct_year": 2022,
+   "direct_prem": 41.516034999966365,
+   "direct_codes": "2"
+  },
+  {
+   "county_fips": "26161",
+   "codes_2022": "NA",
+   "est_2022": false,
+   "pctile_imputed_2022": false,
+   "survey_year": 2022,
+   "survey_prem": 31.137066048225364,
+   "survey_codes": "NA",
+   "direct_year": 2022,
+   "direct_prem": 31.137066048225364,
+   "direct_codes": "NA"
+  }
+ ],
+ "top10": [
+  {
+   "county_fips": "27145",
+   "score": 127.33725636176317,
+   "n_years": 4,
+   "n_pos": 4,
+   "has_ref": true,
+   "score_pct": 75.83783932352097,
+   "NAME": "Stearns County, Minnesota",
+   "state_abbr": "MN",
+   "area_title": "St. Cloud, MN",
+   "oews_area": "0041060",
+   "MCPRESCHOOL": 336.67,
+   "pred": 166.94830817194028,
+   "prem": 169.72169182805973,
+   "prem_pct": 105.57074389578904,
+   "zone_n": 1.0,
+   "codes": "5",
+   "state_level": false,
+   "psm": false,
+   "interp": true,
+   "kids_under6_allpar_lf": 9982.0,
+   "pop_total": 158622.0,
+   "wage_annual": 27810.0,
+   "median_gross_rent": 975.0,
+   "per_capita_income": 36087.0,
+   "female_college_share": 0.3122732831706154,
+   "female_ftyr_share": 0.4616483068135455,
+   "under6_careneed_share": 0.0629294801477726,
+   "prem_fe": 122.91470387993047,
+   "elig_years": true,
+   "elig_stable": true,
+   "elig_local_price": true,
+   "elig_size": true,
+   "eligible": true,
+   "metro_rank": 1,
+   "rank": 1,
+   "prem_fe_rank_in_state": 1,
+   "n_in_state": 27,
+   "prem_share_pct": 101.66122297763158
+  },
+  {
+   "county_fips": "25021",
+   "score": 113.98765329552374,
+   "n_years": 4,
+   "n_pos": 4,
+   "has_ref": true,
+   "score_pct": 37.71317031599721,
+   "NAME": "Norfolk County, Massachusetts",
+   "state_abbr": "MA",
+   "area_title": "Boston-Cambridge-Nashua, MA-NH",
+   "oews_area": "0071650",
+   "MCPRESCHOOL": 420.0,
+   "pred": 303.5125465469906,
+   "prem": 116.48745345300938,
+   "prem_pct": 41.23043598191245,
+   "zone_n": 1.0,
+   "codes": "2",
+   "state_level": false,
+   "psm": false,
+   "interp": false,
+   "kids_under6_allpar_lf": 32889.0,
+   "pop_total": 722112.0,
+   "wage_annual": 39080.0,
+   "median_gross_rent": 1933.0,
+   "per_capita_income": 66685.0,
+   "female_college_share": 0.5695375435854274,
+   "female_ftyr_share": 0.4880940831073072,
+   "under6_careneed_share": 0.0455455663387397,
+   "prem_fe": 84.29681347911594,
+   "elig_years": true,
+   "elig_stable": true,
+   "elig_local_price": true,
+   "elig_size": true,
+   "eligible": true,
+   "metro_rank": 1,
+   "rank": 2,
+   "prem_fe_rank_in_state": 1,
+   "n_in_state": 10,
+   "prem_share_pct": 38.379781916189906
+  },
+  {
+   "county_fips": "17113",
+   "score": 95.3686871710533,
+   "n_years": 4,
+   "n_pos": 4,
+   "has_ref": true,
+   "score_pct": 60.60811733759765,
+   "NAME": "McLean County, Illinois",
+   "state_abbr": "IL",
+   "area_title": "Bloomington, IL",
+   "oews_area": "0014010",
+   "MCPRESCHOOL": 279.0,
+   "pred": 167.7052115861361,
+   "prem": 111.2947884138639,
+   "prem_pct": 69.65507678432161,
+   "zone_n": 1.0,
+   "codes": "2,4,5",
+   "state_level": false,
+   "psm": false,
+   "interp": true,
+   "kids_under6_allpar_lf": 7742.0,
+   "pop_total": 171284.0,
+   "wage_annual": 28200.0,
+   "median_gross_rent": 941.0,
+   "per_capita_income": 40252.0,
+   "female_college_share": 0.4630613945735716,
+   "female_ftyr_share": 0.4347414283008145,
+   "under6_careneed_share": 0.0451997851521449,
+   "prem_fe": 86.94751729643735,
+   "elig_years": true,
+   "elig_stable": true,
+   "elig_local_price": true,
+   "elig_size": true,
+   "eligible": true,
+   "metro_rank": 1,
+   "rank": 3,
+   "prem_fe_rank_in_state": 1,
+   "n_in_state": 33,
+   "prem_share_pct": 66.3633451585976
+  },
+  {
+   "county_fips": "24027",
+   "score": 81.74858878832944,
+   "n_years": 4,
+   "n_pos": 4,
+   "has_ref": true,
+   "score_pct": 38.36294432734516,
+   "NAME": "Howard County, Maryland",
+   "state_abbr": "MD",
+   "area_title": "Baltimore-Columbia-Towson, MD",
+   "oews_area": "0012580",
+   "MCPRESCHOOL": 335.71,
+   "pred": 246.77714136669502,
+   "prem": 88.93285863330496,
+   "prem_pct": 45.33623911259641,
+   "zone_n": 2.0,
+   "codes": "4,5",
+   "state_level": false,
+   "psm": false,
+   "interp": true,
+   "kids_under6_allpar_lf": 16287.0,
+   "pop_total": 332011.0,
+   "wage_annual": 31190.0,
+   "median_gross_rent": 1920.0,
+   "per_capita_income": 63441.0,
+   "female_college_share": 0.6313041832943443,
+   "female_ftyr_share": 0.5160079713923862,
+   "under6_careneed_share": 0.0490556035793994,
+   "prem_fe": 75.20957992239903,
+   "elig_years": true,
+   "elig_stable": true,
+   "elig_local_price": true,
+   "elig_size": true,
+   "eligible": true,
+   "metro_rank": 1,
+   "rank": 4,
+   "prem_fe_rank_in_state": 1,
+   "n_in_state": 19,
+   "prem_share_pct": 36.03772137920847
+  },
+  {
+   "county_fips": "53033",
+   "score": 65.11895116792941,
+   "n_years": 4,
+   "n_pos": 4,
+   "has_ref": true,
+   "score_pct": 20.03214989288939,
+   "NAME": "King County, Washington",
+   "state_abbr": "WA",
+   "area_title": "Seattle-Tacoma-Bellevue, WA",
+   "oews_area": "0042660",
+   "MCPRESCHOOL": 389.7,
+   "pred": 306.7162701512741,
+   "prem": 82.98372984872589,
+   "prem_pct": 29.533735187301048,
+   "zone_n": 1.0,
+   "codes": "2,5",
+   "state_level": false,
+   "psm": false,
+   "interp": true,
+   "kids_under6_allpar_lf": 90718.0,
+   "pop_total": 2254371.0,
+   "wage_annual": 39390.0,
+   "median_gross_rent": 1950.0,
+   "per_capita_income": 66811.0,
+   "female_college_share": 0.5479320470949859,
+   "female_ftyr_share": 0.467737536962671,
+   "under6_careneed_share": 0.0402409363853598,
+   "prem_fe": 67.29385782087098,
+   "elig_years": true,
+   "elig_stable": true,
+   "elig_local_price": true,
+   "elig_size": true,
+   "eligible": true,
+   "metro_rank": 1,
+   "rank": 5,
+   "prem_fe_rank_in_state": 1,
+   "n_in_state": 20,
+   "prem_share_pct": 27.05553566095397
+  },
+  {
+   "county_fips": "17043",
+   "score": 63.69073105179476,
+   "n_years": 4,
+   "n_pos": 4,
+   "has_ref": true,
+   "score_pct": 30.096906682843724,
+   "NAME": "DuPage County, Illinois",
+   "state_abbr": "IL",
+   "area_title": "Chicago-Naperville-Elgin, IL-IN-WI",
+   "oews_area": "0016980",
+   "MCPRESCHOOL": 315.83,
+   "pred": 229.50762782173814,
+   "prem": 86.32237217826184,
+   "prem_pct": 43.111064604613205,
+   "zone_n": 1.0,
+   "codes": "2,4,5",
+   "state_level": false,
+   "psm": false,
+   "interp": true,
+   "kids_under6_allpar_lf": 42574.0,
+   "pop_total": 930559.0,
+   "wage_annual": 31830.0,
+   "median_gross_rent": 1551.0,
+   "per_capita_income": 55107.0,
+   "female_college_share": 0.5053838296630471,
+   "female_ftyr_share": 0.4723802129921858,
+   "under6_careneed_share": 0.0457509948321385,
+   "prem_fe": 57.5209088802286,
+   "elig_years": true,
+   "elig_stable": true,
+   "elig_local_price": true,
+   "elig_size": true,
+   "eligible": true,
+   "metro_rank": 1,
+   "rank": 6,
+   "prem_fe_rank_in_state": 2,
+   "n_in_state": 33,
+   "prem_share_pct": 37.61198396652406
+  },
+  {
+   "county_fips": "17019",
+   "score": 49.086174037928096,
+   "n_years": 4,
+   "n_pos": 4,
+   "has_ref": true,
+   "score_pct": 29.82629095737699,
+   "NAME": "Champaign County, Illinois",
+   "state_abbr": "IL",
+   "area_title": "Champaign-Urbana, IL",
+   "oews_area": "0016580",
+   "MCPRESCHOOL": 239.0,
+   "pred": 174.08899805403908,
+   "prem": 64.91100194596092,
+   "prem_pct": 40.27982719875598,
+   "zone_n": 1.0,
+   "codes": "2,4,5",
+   "state_level": false,
+   "psm": false,
+   "interp": true,
+   "kids_under6_allpar_lf": 9532.0,
+   "pop_total": 206525.0,
+   "wage_annual": 28800.0,
+   "median_gross_rent": 977.0,
+   "per_capita_income": 35810.0,
+   "female_college_share": 0.4571257504409599,
+   "female_ftyr_share": 0.3990469342582018,
+   "under6_careneed_share": 0.0461542186176007,
+   "prem_fe": 42.23686866676536,
+   "elig_years": true,
+   "elig_stable": true,
+   "elig_local_price": true,
+   "elig_size": true,
+   "eligible": true,
+   "metro_rank": 1,
+   "rank": 7,
+   "prem_fe_rank_in_state": 4,
+   "n_in_state": 33,
+   "prem_share_pct": 37.286102322107595
+  },
+  {
+   "county_fips": "24031",
+   "score": 43.27585052169407,
+   "n_years": 4,
+   "n_pos": 4,
+   "has_ref": true,
+   "score_pct": 16.732206585664894,
+   "NAME": "Montgomery County, Maryland",
+   "state_abbr": "MD",
+   "area_title": "Washington-Arlington-Alexandria, DC-VA-MD-WV",
+   "oews_area": "0047900",
+   "MCPRESCHOOL": 335.71,
+   "pred": 279.6075408532809,
+   "prem": 56.10245914671907,
+   "prem_pct": 25.06809049502836,
+   "zone_n": 2.0,
+   "codes": "4,5",
+   "state_level": false,
+   "psm": false,
+   "interp": true,
+   "kids_under6_allpar_lf": 54089.0,
+   "pop_total": 1056910.0,
+   "wage_annual": 35510.0,
+   "median_gross_rent": 1957.0,
+   "per_capita_income": 64126.0,
+   "female_college_share": 0.5975222463289627,
+   "female_ftyr_share": 0.5044045313795397,
+   "under6_careneed_share": 0.0511765429412154,
+   "prem_fe": 62.68415489515331,
+   "elig_years": true,
+   "elig_stable": true,
+   "elig_local_price": true,
+   "elig_size": true,
+   "eligible": true,
+   "metro_rank": 1,
+   "rank": 8,
+   "prem_fe_rank_in_state": 2,
+   "n_in_state": 19,
+   "prem_share_pct": 20.06471605719598
+  },
+  {
+   "county_fips": "25027",
+   "score": 42.65576557622303,
+   "n_years": 4,
+   "n_pos": 4,
+   "has_ref": true,
+   "score_pct": 19.179066280920807,
+   "NAME": "Worcester County, Massachusetts",
+   "state_abbr": "MA",
+   "area_title": "Worcester, MA-CT",
+   "oews_area": "0079600",
+   "MCPRESCHOOL": 285.0,
+   "pred": 243.48396500003363,
+   "prem": 41.516034999966365,
+   "prem_pct": 19.535604711955944,
+   "zone_n": 1.0,
+   "codes": "2",
+   "state_level": false,
+   "psm": false,
+   "interp": false,
+   "kids_under6_allpar_lf": 37348.0,
+   "pop_total": 858898.0,
+   "wage_annual": 36200.0,
+   "median_gross_rent": 1263.0,
+   "per_capita_income": 45433.0,
+   "female_college_share": 0.3913014945941955,
+   "female_ftyr_share": 0.4443665272505447,
+   "under6_careneed_share": 0.0434836266937401,
+   "prem_fe": 19.773485258420237,
+   "elig_years": true,
+   "elig_stable": true,
+   "elig_local_price": true,
+   "elig_size": true,
+   "eligible": true,
+   "metro_rank": 1,
+   "rank": 9,
+   "prem_fe_rank_in_state": 2,
+   "n_in_state": 10,
+   "prem_share_pct": 17.050829199352258
+  },
+  {
+   "county_fips": "26161",
+   "score": 41.82472939048686,
+   "n_years": 4,
+   "n_pos": 4,
+   "has_ref": true,
+   "score_pct": 23.864924252441536,
+   "NAME": "Washtenaw County, Michigan",
+   "state_abbr": "MI",
+   "area_title": "Ann Arbor, MI",
+   "oews_area": "0011460",
+   "MCPRESCHOOL": 224.47,
+   "pred": 193.33293395177463,
+   "prem": 31.137066048225364,
+   "prem_pct": 20.500055870797684,
+   "zone_n": 1.0,
+   "codes": "NA",
+   "state_level": false,
+   "psm": false,
+   "interp": false,
+   "kids_under6_allpar_lf": 13199.0,
+   "pop_total": 370231.0,
+   "wage_annual": 28530.0,
+   "median_gross_rent": 1335.0,
+   "per_capita_income": 49568.0,
+   "female_college_share": 0.5777896043995033,
+   "female_ftyr_share": 0.38898756660746,
+   "under6_careneed_share": 0.0356507153641915,
+   "prem_fe": 43.365427445149805,
+   "elig_years": true,
+   "elig_stable": true,
+   "elig_local_price": true,
+   "elig_size": true,
+   "eligible": true,
+   "metro_rank": 1,
+   "rank": 10,
+   "prem_fe_rank_in_state": 2,
+   "n_in_state": 26,
+   "prem_share_pct": 16.10541226048546
+  }
+ ],
+ "next10": [
+  {
+   "county_fips": "30063",
+   "NAME": "Missoula County, Montana",
+   "area_title": "Missoula, MT",
+   "score": 38.8387496466108,
+   "MCPRESCHOOL": 195.52,
+   "pred": 161.0245605395045
+  },
+  {
+   "county_fips": "41051",
+   "NAME": "Multnomah County, Oregon",
+   "area_title": "Portland-Vancouver-Hillsboro, OR-WA",
+   "score": 38.66046209422473,
+   "MCPRESCHOOL": 296.86,
+   "pred": 258.9455944676489
+  },
+  {
+   "county_fips": "02020",
+   "NAME": "Anchorage Municipality, Alaska",
+   "area_title": "Anchorage, AK",
+   "score": 38.16959766550711,
+   "MCPRESCHOOL": 289.75,
+   "pred": 231.0929935610414
+  },
+  {
+   "county_fips": "30013",
+   "NAME": "Cascade County, Montana",
+   "area_title": "Great Falls, MT",
+   "score": 36.00655342514773,
+   "MCPRESCHOOL": 196.68,
+   "pred": 151.71015819056285
+  },
+  {
+   "county_fips": "17201",
+   "NAME": "Winnebago County, Illinois",
+   "area_title": "Rockford, IL",
+   "score": 35.67459978690538,
+   "MCPRESCHOOL": 184.53,
+   "pred": 164.44224001537287
+  },
+  {
+   "county_fips": "17143",
+   "NAME": "Peoria County, Illinois",
+   "area_title": "Peoria, IL",
+   "score": 33.606718549826816,
+   "MCPRESCHOOL": 193.67,
+   "pred": 171.48862333668586
+  },
+  {
+   "county_fips": "30111",
+   "NAME": "Yellowstone County, Montana",
+   "area_title": "Billings, MT",
+   "score": 33.596152282731886,
+   "MCPRESCHOOL": 202.7,
+   "pred": 165.78907605163766
+  },
+  {
+   "county_fips": "41003",
+   "NAME": "Benton County, Oregon",
+   "area_title": "Corvallis, OR",
+   "score": 33.42731920303138,
+   "MCPRESCHOOL": 244.16,
+   "pred": 208.53665008517572
+  },
+  {
+   "county_fips": "17119",
+   "NAME": "Madison County, Illinois",
+   "area_title": "St. Louis, MO-IL",
+   "score": 31.79234437719701,
+   "MCPRESCHOOL": 208.33,
+   "pred": 179.37390568854875
+  },
+  {
+   "county_fips": "54081",
+   "NAME": "Raleigh County, West Virginia",
+   "area_title": "Beckley, WV",
+   "score": 31.467107883113883,
+   "MCPRESCHOOL": 166.75,
+   "pred": 114.31640754489716
+  }
+ ],
+ "watch": [
+  {
+   "county_fips": "51013",
+   "NAME": "Arlington County, Virginia",
+   "area_title": "Washington-Arlington-Alexandria, DC-VA-MD-WV",
+   "score": 159.34848810704577,
+   "zone_n": 1.0,
+   "codes": "5,6",
+   "MCPRESCHOOL": 496.3
+  },
+  {
+   "county_fips": "27109",
+   "NAME": "Olmsted County, Minnesota",
+   "area_title": "Rochester, MN",
+   "score": 121.41662115091593,
+   "zone_n": 8.0,
+   "codes": "5",
+   "MCPRESCHOOL": 309.0
+  },
+  {
+   "county_fips": "55139",
+   "NAME": "Winnebago County, Wisconsin",
+   "area_title": "Oshkosh-Neenah, WI",
+   "score": 118.75658587422971,
+   "zone_n": 10.0,
+   "codes": "NI",
+   "MCPRESCHOOL": 258.75
+  },
+  {
+   "county_fips": "55079",
+   "NAME": "Milwaukee County, Wisconsin",
+   "area_title": "Milwaukee-Waukesha-West Allis, WI",
+   "score": 114.62133650956781,
+   "zone_n": 10.0,
+   "codes": "NI",
+   "MCPRESCHOOL": 258.75
+  },
+  {
+   "county_fips": "27123",
+   "NAME": "Ramsey County, Minnesota",
+   "area_title": "Minneapolis-St. Paul-Bloomington, MN-WI",
+   "score": 99.53615047588117,
+   "zone_n": 8.0,
+   "codes": "5",
+   "MCPRESCHOOL": 309.0
+  },
+  {
+   "county_fips": "55025",
+   "NAME": "Dane County, Wisconsin",
+   "area_title": "Madison, WI",
+   "score": 97.48960793573357,
+   "zone_n": 10.0,
+   "codes": "NI",
+   "MCPRESCHOOL": 258.75
+  },
+  {
+   "county_fips": "39013",
+   "NAME": "Belmont County, Ohio",
+   "area_title": "Wheeling, WV-OH",
+   "score": 95.625278122846,
+   "zone_n": 29.0,
+   "codes": "NI",
+   "MCPRESCHOOL": 232.0
+  },
+  {
+   "county_fips": "55035",
+   "NAME": "Eau Claire County, Wisconsin",
+   "area_title": "Eau Claire, WI",
+   "score": 94.56507345723986,
+   "zone_n": 10.0,
+   "codes": "NI",
+   "MCPRESCHOOL": 258.75
+  },
+  {
+   "county_fips": "55009",
+   "NAME": "Brown County, Wisconsin",
+   "area_title": "Green Bay, WI",
+   "score": 89.38560313957889,
+   "zone_n": 10.0,
+   "codes": "NI",
+   "MCPRESCHOOL": 258.75
+  },
+  {
+   "county_fips": "06075",
+   "NAME": "San Francisco County, California",
+   "area_title": "San Francisco-Oakland-Hayward, CA",
+   "score": 89.04192162750559,
+   "zone_n": 1.0,
+   "codes": "5,6",
+   "MCPRESCHOOL": 477.04
+  }
+ ],
+ "funnel": {
+  "scored_2022": 998,
+  "years_ok": 973,
+  "years_stable": 296,
+  "local_price": 57,
+  "size": 44,
+  "metros": 32
+ },
+ "rules": {
+  "recent": [
+   2019,
+   2020,
+   2021,
+   2022
+  ],
+  "min_kids": 2000,
+  "max_zone": 2
+ },
+ "profile": {
+  "Weekly preschool price ($)": {
+   "Top 10 (mean)": 316.109,
+   "All metro counties (mean)": 174.47948897795595,
+   "All metro (median)": 162.115
+  },
+  "Predicted price ($)": {
+   "Top 10 (mean)": 231.16805435039024,
+   "All metro counties (mean)": 174.47948897795564,
+   "All metro (median)": 164.8363948380446
+  },
+  "Premium over predicted price ($/wk)": {
+   "Top 10 (mean)": 84.94094564960974,
+   "All metro counties (mean)": 2.6473768623751066e-13,
+   "All metro (median)": -4.0171600456173735
+  },
+  "Childcare-worker wage ($/yr)": {
+   "Top 10 (mean)": 32654.0,
+   "All metro counties (mean)": 27780.470941883766,
+   "All metro (median)": 26870.0
+  },
+  "Median gross rent ($/mo)": {
+   "Top 10 (mean)": 1480.2,
+   "All metro counties (mean)": 1105.9669338677354,
+   "All metro (median)": 1019.0
+  },
+  "Per-capita income ($)": {
+   "Top 10 (mean)": 52332.0,
+   "All metro counties (mean)": 37859.08817635271,
+   "All metro (median)": 36266.5
+  },
+  "Women 25+ w/ bachelor's+": {
+   "Top 10 (mean)": 0.5053231377145613,
+   "All metro counties (mean)": 0.3061879967915906,
+   "All metro (median)": 0.28940523444663135
+  },
+  "Women full-time year-round": {
+   "Top 10 (mean)": 0.4577415099064656,
+   "All metro counties (mean)": 0.4462188533480585,
+   "All metro (median)": 0.44955369074656804
+  },
+  "Under-6 needing care (% pop)": {
+   "Top 10 (mean)": 0.04651874700523026,
+   "All metro counties (mean)": 0.04323196167563195,
+   "All metro (median)": 0.043755416702003946
+  },
+  "Under-6 needing care (#)": {
+   "Top 10 (mean)": 31436.0,
+   "All metro counties (mean)": 11537.889779559118,
+   "All metro (median)": 4285.5
+  }
+ },
+ "robust": {
+  "Log model (% premium)": {
+   "overlap": 6,
+   "of": 10
+  },
+  "2022 premium only": {
+   "overlap": 8,
+   "of": 10
+  },
+  "Survey years only": {
+   "overlap": 9,
+   "of": 10
+  },
+  "Within-state premium (state FE)": {
+   "overlap": 9,
+   "of": 10
+  },
+  "Top-10 still above within-state prediction": {
+   "overlap": 10,
+   "of": 10
+  }
+ },
+ "robust_sets": {
+  "Log model (% premium)": [
+   "17019",
+   "17043",
+   "17113",
+   "17201",
+   "24027",
+   "25021",
+   "27145",
+   "30013",
+   "30063",
+   "54081"
+  ],
+  "2022 premium only": [
+   "02020",
+   "17019",
+   "17043",
+   "17113",
+   "24027",
+   "24031",
+   "25021",
+   "27145",
+   "53033",
+   "54107"
+  ],
+  "Survey years only": [
+   "02020",
+   "17019",
+   "17043",
+   "17113",
+   "24027",
+   "24031",
+   "25021",
+   "25027",
+   "27145",
+   "53033"
+  ],
+  "Within-state premium (state FE)": [
+   "17019",
+   "17043",
+   "17113",
+   "24027",
+   "24031",
+   "25021",
+   "26161",
+   "27145",
+   "41051",
+   "53033"
+  ]
+ },
+ "backtest": {
+  "n_picked": 10,
+  "n_with_2022": 6,
+  "picks_prem_2022_mean": 70.26532083732428,
+  "picks_prem_2019_22_mean": 61.103464337574074,
+  "picks_share_pos_2022": 1.0,
+  "picks_formation_score": 83.25564817919486,
+  "all_counties_prem_2022_mean": 2.651933449057336e-13,
+  "eligible_pool_prem_2022_mean": 30.733342845974864,
+  "picks": [
+   {
+    "county_fips": "51013",
+    "NAME": "Arlington County, Virginia",
+    "area_title": "Washington-Arlington-Alexandria, DC-VA-MD-WV",
+    "score": 109.49806414513435,
+    "prem2022": 200.73443469926104
+   },
+   {
+    "county_fips": "41051",
+    "NAME": "Multnomah County, Oregon",
+    "area_title": "Portland-Vancouver-Hillsboro, OR-WA",
+    "score": 106.95376624070586,
+    "prem2022": 37.91440553235111
+   },
+   {
+    "county_fips": "25021",
+    "NAME": "Norfolk County, Massachusetts",
+    "area_title": "Boston-Cambridge-Nashua, MA-NH",
+    "score": 102.514812735859,
+    "prem2022": 116.48745345300938
+   },
+   {
+    "county_fips": "41003",
+    "NAME": "Benton County, Oregon",
+    "area_title": "Corvallis, OR",
+    "score": 96.37916440302075,
+    "prem2022": 35.623349914824274
+   },
+   {
+    "county_fips": "42125",
+    "NAME": "Washington County, Pennsylvania",
+    "area_title": "Pittsburgh, PA",
+    "score": 74.54306688107654,
+    "prem2022": null
+   },
+   {
+    "county_fips": "09001",
+    "NAME": "Fairfield County, Connecticut",
+    "area_title": "Bridgeport-Stamford-Norwalk, CT",
+    "score": 74.20516433212023,
+    "prem2022": null
+   },
+   {
+    "county_fips": "19169",
+    "NAME": "Story County, Iowa",
+    "area_title": "Ames, IA",
+    "score": 72.75052225082524,
+    "prem2022": 8.323709421513144
+   },
+   {
+    "county_fips": "42029",
+    "NAME": "Chester County, Pennsylvania",
+    "area_title": "Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",
+    "score": 68.2329013552594,
+    "prem2022": null
+   },
+   {
+    "county_fips": "42085",
+    "NAME": "Mercer County, Pennsylvania",
+    "area_title": "Youngstown-Warren-Boardman, OH-PA",
+    "score": 63.985208825371934,
+    "prem2022": null
+   },
+   {
+    "county_fips": "41039",
+    "NAME": "Lane County, Oregon",
+    "area_title": "Eugene, OR",
+    "score": 63.49381062257537,
+    "prem2022": 22.508572002986767
+   }
+  ],
+  "overlap_with_2022_top10": 1,
+  "deciles": [
+   {
+    "decile": 1,
+    "formation": -52.02873026050716,
+    "prem2022": -31.294072060972553,
+    "n": 100
+   },
+   {
+    "decile": 2,
+    "formation": -31.94850738634506,
+    "prem2022": -27.903096258910498,
+    "n": 99
+   },
+   {
+    "decile": 3,
+    "formation": -21.872586623918775,
+    "prem2022": -14.423234696920902,
+    "n": 100
+   },
+   {
+    "decile": 4,
+    "formation": -15.056147108157658,
+    "prem2022": -10.975869634813824,
+    "n": 99
+   },
+   {
+    "decile": 5,
+    "formation": -7.310247272008467,
+    "prem2022": -2.857710080593094,
+    "n": 100
+   },
+   {
+    "decile": 6,
+    "formation": -0.10255258983165248,
+    "prem2022": -3.266533160127457,
+    "n": 99
+   },
+   {
+    "decile": 7,
+    "formation": 7.4393996746587545,
+    "prem2022": 1.9317235703633944,
+    "n": 99
+   },
+   {
+    "decile": 8,
+    "formation": 19.44683121841306,
+    "prem2022": 14.218202524031273,
+    "n": 100
+   },
+   {
+    "decile": 9,
+    "formation": 35.69481004016729,
+    "prem2022": 22.46954441441927,
+    "n": 99
+   },
+   {
+    "decile": 10,
+    "formation": 71.7945992395336,
+    "prem2022": 51.01615404248565,
+    "n": 100
+   }
+  ],
+  "corr_formation_2022": 0.6396072554376033,
+  "slope_2022_on_formation": 0.6861307767103951,
+  "spearman": 0.6099269912930603
+ },
+ "stability": {
+  "corr_matrix": {
+   "2015": {
+    "2015": 1.0,
+    "2016": 0.94,
+    "2017": 0.857,
+    "2018": 0.764,
+    "2019": 0.712,
+    "2020": 0.652,
+    "2021": 0.613,
+    "2022": 0.548
+   },
+   "2016": {
+    "2015": 0.94,
+    "2016": 1.0,
+    "2017": 0.932,
+    "2018": 0.844,
+    "2019": 0.767,
+    "2020": 0.705,
+    "2021": 0.629,
+    "2022": 0.59
+   },
+   "2017": {
+    "2015": 0.857,
+    "2016": 0.932,
+    "2017": 1.0,
+    "2018": 0.934,
+    "2019": 0.829,
+    "2020": 0.747,
+    "2021": 0.662,
+    "2022": 0.647
+   },
+   "2018": {
+    "2015": 0.764,
+    "2016": 0.844,
+    "2017": 0.934,
+    "2018": 1.0,
+    "2019": 0.93,
+    "2020": 0.85,
+    "2021": 0.727,
+    "2022": 0.701
+   },
+   "2019": {
+    "2015": 0.712,
+    "2016": 0.767,
+    "2017": 0.829,
+    "2018": 0.93,
+    "2019": 1.0,
+    "2020": 0.94,
+    "2021": 0.847,
+    "2022": 0.806
+   },
+   "2020": {
+    "2015": 0.652,
+    "2016": 0.705,
+    "2017": 0.747,
+    "2018": 0.85,
+    "2019": 0.94,
+    "2020": 1.0,
+    "2021": 0.906,
+    "2022": 0.856
+   },
+   "2021": {
+    "2015": 0.613,
+    "2016": 0.629,
+    "2017": 0.662,
+    "2018": 0.727,
+    "2019": 0.847,
+    "2020": 0.906,
+    "2021": 1.0,
+    "2022": 0.936
+   },
+   "2022": {
+    "2015": 0.548,
+    "2016": 0.59,
+    "2017": 0.647,
+    "2018": 0.701,
+    "2019": 0.806,
+    "2020": 0.856,
+    "2021": 0.936,
+    "2022": 1.0
+   }
+  },
+  "lag": [
+   {
+    "lag": 1,
+    "corr_all": 0.9296153461472371,
+    "n_all": 6787,
+    "corr_survey": 0.8803809148879395,
+    "n_survey": 1045
+   },
+   {
+    "lag": 2,
+    "corr_all": 0.8454464998867327,
+    "n_all": 5883,
+    "corr_survey": 0.7970735014432629,
+    "n_survey": 1463
+   },
+   {
+    "lag": 3,
+    "corr_all": 0.7612001929575082,
+    "n_all": 4828,
+    "corr_survey": 0.7211726150793578,
+    "n_survey": 1008
+   },
+   {
+    "lag": 4,
+    "corr_all": 0.6939470809814559,
+    "n_all": 3769,
+    "corr_survey": 0.632665629160309,
+    "n_survey": 762
+   },
+   {
+    "lag": 5,
+    "corr_all": 0.6438294390834179,
+    "n_all": 2710,
+    "corr_survey": 0.5053588168422732,
+    "n_survey": 887
+   },
+   {
+    "lag": 6,
+    "corr_all": 0.5978841687685299,
+    "n_all": 1673,
+    "corr_survey": 0.7104586776299224,
+    "n_survey": 407
+   },
+   {
+    "lag": 7,
+    "corr_all": 0.5482077050617051,
+    "n_all": 903,
+    "corr_survey": 0.6007137994562485,
+    "n_survey": 260
+   }
+  ],
+  "top_q_stay": 0.6728110599078341,
+  "top_q_top2": 0.8847926267281105,
+  "bottom_q_stay": 0.6451612903225806,
+  "n_q": 1082,
+  "corr_early_late": 0.7602534077392753,
+  "top10_paths": {
+   "27145": {
+    "2015": 48.93744672192375,
+    "2016": 30.57151889251776,
+    "2017": 51.98622071645971,
+    "2018": 55.13660121100958,
+    "2019": 87.4101459274487,
+    "2020": 117.16972581480235,
+    "2021": 135.04746187674192,
+    "2022": 169.72169182805973
+   },
+   "25021": {
+    "2015": 118.54755330206382,
+    "2016": 111.33377994868113,
+    "2017": 92.97681840178336,
+    "2018": 87.20109929090768,
+    "2019": 104.95384583055096,
+    "2020": 118.5358657155814,
+    "2021": 115.97344818295323,
+    "2022": 116.48745345300938
+   },
+   "17113": {
+    "2015": 46.91486646074492,
+    "2016": 46.06705196783335,
+    "2017": 50.010099768753975,
+    "2018": 55.090543804853894,
+    "2019": 78.94160821878233,
+    "2020": 90.04880190058788,
+    "2021": 101.1895501509791,
+    "2022": 111.2947884138639
+   },
+   "24027": {
+    "2015": 47.15542036586743,
+    "2016": 50.144767018300456,
+    "2017": 42.22773672998977,
+    "2018": 54.37929557607396,
+    "2019": 72.54579234622491,
+    "2020": 86.02564888947092,
+    "2021": 79.49005528431695,
+    "2022": 88.93285863330496
+   },
+   "53033": {
+    "2015": 58.09098498390176,
+    "2016": 66.29068545484432,
+    "2017": 46.04085546616449,
+    "2018": 36.625845773963135,
+    "2019": 47.97233718360923,
+    "2020": 64.88182697859384,
+    "2021": 64.63791066078869,
+    "2022": 82.98372984872589
+   },
+   "17043": {
+    "2015": 19.32762347483549,
+    "2016": 25.108622366541084,
+    "2017": 25.194067208400725,
+    "2018": 21.28581565013775,
+    "2019": 41.71000223448078,
+    "2020": 57.81704384176419,
+    "2021": 68.91350595267221,
+    "2022": 86.32237217826184
+   },
+   "17019": {
+    "2015": 30.518445094600168,
+    "2016": 29.60378327197543,
+    "2017": 10.717280614916433,
+    "2018": 16.53102538798933,
+    "2019": 28.882122759705908,
+    "2020": 50.0133476854642,
+    "2021": 52.53822376058136,
+    "2022": 64.91100194596092
+   },
+   "24031": {
+    "2015": 13.703765268151301,
+    "2016": 7.533650693606376,
+    "2017": -7.119447836143195,
+    "2018": 8.698426137047534,
+    "2019": 32.20470958101396,
+    "2020": 40.31265181615174,
+    "2021": 44.4835815428915,
+    "2022": 56.10245914671907
+   },
+   "25027": {
+    "2015": 49.32581739936256,
+    "2016": 44.65973206059158,
+    "2017": 28.40036550231389,
+    "2018": 31.69247556853412,
+    "2019": 34.831744628878994,
+    "2020": 57.697829755472725,
+    "2021": 36.577452920574046,
+    "2022": 41.516034999966365
+   },
+   "26161": {
+    "2015": 24.558219095485242,
+    "2016": 40.45541787172556,
+    "2017": 38.49559770882655,
+    "2018": 59.80863472562797,
+    "2019": 52.794823745416494,
+    "2020": 46.41939284337016,
+    "2021": 36.947634924935414,
+    "2022": 31.137066048225364
+   }
+  },
+  "top10_min_prem_by_year": {
+   "2015": 13.703765268151301,
+   "2016": 7.533650693606376,
+   "2017": -7.119447836143195,
+   "2018": 8.698426137047534,
+   "2019": 28.882122759705908,
+   "2020": 40.31265181615174,
+   "2021": 36.577452920574046,
+   "2022": 31.137066048225364
+  },
+  "share_counties_sign_same_2019_2022": 0.797741273100616
+ },
+ "transition": {
+  "0": {
+   "0": 0.645,
+   "1": 0.181,
+   "2": 0.12,
+   "3": 0.046,
+   "4": 0.009
+  },
+  "1": {
+   "0": 0.198,
+   "1": 0.426,
+   "2": 0.227,
+   "3": 0.116,
+   "4": 0.032
+  },
+  "2": {
+   "0": 0.078,
+   "1": 0.245,
+   "2": 0.347,
+   "3": 0.255,
+   "4": 0.074
+  },
+  "3": {
+   "0": 0.078,
+   "1": 0.097,
+   "2": 0.227,
+   "3": 0.384,
+   "4": 0.212
+  },
+  "4": {
+   "0": 0.0,
+   "1": 0.051,
+   "2": 0.079,
+   "3": 0.199,
+   "4": 0.673
+  }
+ },
+ "map": true
+}
