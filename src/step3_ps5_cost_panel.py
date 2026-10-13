@@ -1,15 +1,16 @@
 """
 MGT-403 Data Project -- Problem Set 5: Cost Drivers in Childcare
 
-Inputs (in ./data):
-  oews/oesmYYma.zip            BLS OEWS metropolitan & nonmetropolitan area files, May 2015-2022
-  county_oews_crosswalk.csv    course-provided county x year -> OEWS area crosswalk
-  census_api_key.txt           your Census API key (one line; never printed or logged)
-  cpi_u_annual.csv             CPI-U (CUUR0000SA0) annual averages (BLS)
+Inputs (paths defined in src/common.py):
+  data/extracts/oews_39-9011.csv     SOC 39-9011 rows of the BLS OEWS area files (rebuilt from data/raw/oews/*.zip if missing)
+  data/extracts/acs5_YYYY_county.csv ACS 5-year county data (re-pulled from the Census API only if missing; that is the
+                                     only time a Census API key is needed)
+  data/raw/county_oews_crosswalk.csv course-provided county x year -> OEWS area crosswalk
+  data/raw/cpi_u_annual.csv          CPI-U (CUUR0000SA0) annual averages (BLS)
 
-Outputs (in ./output): panel CSV, figures, tables, results.json and results.txt.
+Outputs (outputs/ps5): panel CSV, figures, tables, results.json and results.txt.
 
-Run:  python ps5.py
+Run:  python src/step3_ps5_cost_panel.py   (or python run_all.py)
 """
 import io
 import json

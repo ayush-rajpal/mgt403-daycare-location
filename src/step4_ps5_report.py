@@ -384,9 +384,9 @@ story += [
     B("Dollar conversion: CPI-U annual averages from the BLS API (2015\u20132022), base year 2022."),
     B("Q6 main test: paired t-test (same counties both years); Welch and metro-area versions as checks. "
       "Q7: conventional OLS SEs, with robust and metro-clustered SEs as checks."),
-    B("Reproduce: put the 8 OEWS zips in data/oews/, the crosswalk and CPI file in data/, and your Census key "
-      "in data/census_api_key.txt (or the CENSUS_API_KEY environment variable). Then run "
-      "<font face='Courier'>python ps5.py</font> and <font face='Courier'>python make_report.py</font>."),
+    B("Reproduce: the code and data are at https://github.com/ayush-rajpal/mgt403-daycare-location. Run <font face='Courier'>python run_all.py</font> "
+      "(no downloads or API key needed: the OEWS and ACS extracts are included; see the repository README for "
+      "rebuilding them from the raw files)."),
 ]
 
 # ---------------- Prompt appendix ----------------

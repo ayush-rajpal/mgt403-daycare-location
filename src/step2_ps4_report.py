@@ -367,10 +367,10 @@ story += [
     B("Puerto Rico's metro municipios are in the crosswalk's metro sample, but NDCP reports their prices only in "
       "2021 (so they do not affect the 2022 or 2015 results)."),
     B("CPI-U: series CUUR0000SA0, annual averages, fetched from the BLS Public Data API (saved to "
-      "data/cpi_u_annual.csv)."),
-    B("Reproduce: put NDCP2022.xlsx and county_oews_crosswalk.csv in data/, then run "
-      "<font face='Courier'>python ps4.py</font> and <font face='Courier'>python make_report.py</font>. "
-      "Every number in this report is read from output/results.json, which ps4.py writes."),
+      "data/raw/cpi_u_annual.csv)."),
+    B("Reproduce: the code and data are at https://github.com/ayush-rajpal/mgt403-daycare-location. Run <font face='Courier'>python run_all.py</font> "
+      "(no downloads or API key needed; see the repository README). Every number in this report is read from "
+      "outputs/ps4/results.json, which step 1 writes."),
 ]
 
 
